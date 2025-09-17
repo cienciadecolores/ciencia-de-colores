@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold', serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;tyle>
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="E:\pagina\CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+  <div>
+<a href="prueba.html"><button class="btn-atras">Atrás</button></a>
+</div>
+  <style>
+
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: calc(100vh - 200px); /* ajustamos para que no tape el header */
+    }
+
+    .left, .right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left {
+      background-color: #f9e1e8;
+    }
+
+    .left-content {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 20px;
+      overflow-y: auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .right {
+      background-color: #e1f5f9;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+       <h1>SISTEMA REPRODUCTOR</h1>
+      <p>Es el sistema que permite que las personas tengan hijos. Está formado por órganos diferentes en los niños y en las niñas. También produce hormonas que hacen que el cuerpo cambie durante la adolescencia.</p>
+      <h2>Órganos</h2>
+      <H3> SISTEMA REPRODUCTOR FEMENINO</H3>
+       <p><strong>Trompas de Falopio:</strong> Son dos tubos que llevan el óvulo desde el ovario hasta el útero.</p>
+<p><strong>Ovario:</strong> Produce óvulos y las hormonas femeninas como los estrógenos.</p>
+<p><strong>Útero:</strong> Es el lugar donde crece el bebé durante el embarazo.</p>
+<p><strong>Endometrio:</strong> Es la capa interna del útero. Se prepara cada mes para recibir un óvulo fecundado.</p>
+<p><strong>Miometrio:</strong> Es la capa muscular del útero. Ayuda a empujar al bebé durante el parto.</p>
+<p><strong>Cuello uterino:</strong> Es la parte baja del útero que se conecta con la vagina.</p>
+<p><strong>Labios menores:</strong> Son pliegues de piel que protegen la entrada de la vagina.</p>
+<p><strong>Vagina:</strong> Es el canal por donde sale el bebé al nacer y también por donde sale la menstruación.</p>
+<h3>SISTEMA REPRODUCTOR MASCULINO</h3>
+<p><strong>Vejiga:</strong> Almacena la orina antes de salir del cuerpo. Aunque no es parte directa del sistema reproductor, está cerca de los órganos masculinos.</p>
+<p><strong>Uréter:</strong> Lleva la orina desde los riñones hasta la vejiga.</p>
+<p><strong>Conducto deferente:</strong> Es el tubo que transporta los espermatozoides desde los testículos hacia afuera.</p>
+<p><strong>Vesícula seminal:</strong> Produce un líquido que se mezcla con los espermatozoides para formar el semen.</p>
+<p><strong>Conducto eyaculador:</strong> Es por donde pasa el semen antes de salir del cuerpo.</p>
+<p><strong>Glándula prostática:</strong> Produce un líquido que ayuda a proteger y alimentar a los espermatozoides.</p>
+<p><strong>Testículo:</strong> Produce espermatozoides y la hormona testosterona.</p>
+<p><strong>Uretra:</strong> Es un conducto por donde sale la orina o el semen fuera del cuerpo.</p>
+<p><strong>Pene:</strong> Es el órgano externo que permite la salida de la orina y el semen.</p>
+      <h3>¿Por qué es importante?</h3>
+       <li> Hace posible la reproducción humana (tener bebés).</li>
+      <li>  Permite que el cuerpo crezca y se desarrolle durante la pubertad.</li>
+       <li> Produce las hormonas sexuales que controlan los cambios físicos.</li>
+
+      <h3>¿Cómo cuidarlo?</h3>
+      <ul>
+     <li> Mantener una buena higiene personal </li>
+     <li> Usar ropa interior limpia y cómoda </li>
+     <li> Hablar con adultos de confianza si se tiene alguna duda </li>
+     <li>Visitar al médico si hay molestias o algo no se siente normal </li>
+     <li>Respetar el propio cuerpo y el de los demás </li>
+      </ul>
+    </div>
+    </div>
+    <div class="right">
+      <img src="imagen sis reproductor.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>
+

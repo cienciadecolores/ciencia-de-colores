@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    body, .btn-atras {
+      font-family: 'Comico', sans-serif;
+    }
+
+    p, h1, h2, h3, li, .btn-atras {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold', serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 9px 8px rgba(173, 216, 230, 0.5);
+      margin-left: 20px;
+      margin-top: -3.5cm;
+      position: absolute;
+      border: 2px solid #ff4f8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="E:\pagina\CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+  <div>
+<a href="prueba.html"><button class="btn-atras">Atrás</button></a>
+</div>
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: calc(150vh - 200px);
+      margin-top: 25px;
+    }
+
+
+    .left {
+  position: relative; /* Necesario para limitar el fondo */
+  background-color: #f9e1e8;
+  width: 50%;
+  overflow-y: auto;
+  height: 909px;
+overflow-x: hidden;
+border-top-left-radius: 50px;
+}
+
+.left-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  padding: 20px 30px 20px 20px;
+}
+.left-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  
+  
+  background-image: url(https://previews.123rf.com/images/sirvectorr/sirvectorr2004/sirvectorr200400077/144568374-bacteria-virus-microbe-seamless-pattern-vector-background-included-line-icons-as-microorganism.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: local; /* esto hace que se mueva con el scroll */
+  background-color: rgba(255, 255, 255, 0.8); /* fondo blanco translúcido */
+  background-blend-mode: overlay;
+}
+
+    .right {
+      background-color: #e1f5f9;
+      height: 121%;
+      width: 50%;
+      border-radius: 50px;
+    }
+
+    .right img {
+      width: 85%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      margin-top: 100px;
+      margin-left: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+    .jasd {
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 830px;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="jasd" style="text-align: center;">SISTEMA INMUNE DEL CUERPO HUMANO</h2>
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+       <h1>SISTEMA INMUNOLÓGICO</h1>
+      <p>Es el sistema que defiende al cuerpo de virus, bacterias y cosas que nos pueden enfermar.</p>
+      <h3>Órganos</h3>
+      <p><strong>Médula ósea:</strong> Lugar dentro de los huesos donde se crean las células que defienden al cuerpo.</p>
+      <p><strong>Timo:</strong> Órgano que ayuda a preparar esas células para que sean fuertes.</p>
+      <p><strong>Ganglios linfáticos:</strong> Pequeños “filtros” que atrapan gérmenes y ayudan a combatirlos.</p>
+      <p><strong>Bazo:</strong> Limpia la sangre y ayuda a eliminar células malas o dañadas.</p>
+      <p><strong>Amígdalas:</strong> Atrapan gérmenes que entran por la boca y la nariz.</p>
+      <p><strong>adenoides:</strong> tejido detras de la nariz.Ayuda atrapar germenes.</p>
+      <p><strong>apendice:</strong>pequeño tubo unido al intestino grueso,se cree que ayuda con las defensas.</p>
+      <p><strong>placas de peyer:</strong> grupos de celulas inmunes en el intestino delgado detectan microbios y protegen.</p>
+      <p><strong>Piel y mucosas:</strong> Son la primera barrera para impedir que entren los microbios.</p>
+      <h3>¿Por qué es importante?</h3>
+      <p>Porque nos protege de enfermedades y ayuda a que el cuerpo se recupere cuando está enfermo.</p>
+      <h3>¿Cómo cuidarlo?</h3>
+      <ul>
+        <li>Comer frutas y verduras para tener energía.</li>
+        <li>Dormir bien para descansar el cuerpo.</li>
+        <li>Lavarse las manos para eliminar gérmenes.</li>
+        <li>Hacer ejercicio para mantener el cuerpo fuerte.</li>
+      </ul>
+    </div>
+    </div>
+    <div class="right">
+      <img src="imagen sis inmuno.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>

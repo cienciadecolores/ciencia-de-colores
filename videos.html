@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+    .an, .hom, .ya, .nas {
+      font-family: 'Comico', sans-serif;
+    }
+    .nn {
+      font-family: 'Comico', sans-serif;
+      font-size: 40px;
+    }
+    .nn {
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .an, .hom, .ya, .nas{
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+  display: flex;
+  gap: 15px;
+  
+  background: rgba(255, 230, 210, 0.5); 
+  
+  padding: 30px; 
+  border-radius: 25px;
+
+  background-image: url(https://thumbs.dreamstime.com/b/fondo-beige-y-marr%C3%B3n-degradado-de-pantalla-abstracto-193373576.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  backdrop-filter: blur(10px);
+  
+  overflow-x: hidden;
+
+  transform: scaleX(1.075);
+}
+
+.yolo {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0.7;
+  gap: 15px;
+
+  background: rgba(225, 225, 225, 225);
+
+  padding: 10px 30px;
+  border-radius: 50px;
+
+  box-shadow: 0 8px 16px rgba(255, 230, 210, 0.6);
+
+  backdrop-filter: blur(10px);
+}
+.an {
+  background-color: #ff6fa0;
+  border: 2px solid #AEC6CF;
+  box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+  animation: pulse 2s infinite;
+  font-size:20px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
+
+}
+.hom {
+  background-color: #AEC6CF;
+  border: 2px solid #ff4f8b;
+  box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
+  animation: pulse 2s infinite;
+  font-size:20px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
+}
+.ya {
+  background-color: #FFFF00;
+  border: 2px solid #AEC6CF;
+  box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+  animation: pulse 2s infinite;
+  font-size:20px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+    .k {
+      margin-top: 0px;
+      width: 700px;
+    }
+    .titulo-con-imagen {
+      margin-top: 10px;
+    }
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body>
+
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+
+  <header>
+    <img src="images.jpg" alt="Logo Izquierdo" class="logo">
+    <div class="yolo">
+      <a href="Q ES ANATO.html"><button class="an">¿QUÉ ES ANATOMÍA?</button></a>
+      <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
+      <a href="ver.html"><button class="an">VIDEOS</button></a>
+      <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
+    </div>
+    <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
+  </header>
+
+    <style>
+        body {
+            background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIQEhIQEBIQEBUSEA8SEBEVFRUQEhAPFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGismHyUtLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS01LS0rLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAaAAACAwEBAAAAAAAAAAAAAAAAAwECBAUG/8QAMRAAAgECBAUCBQMFAQAAAAAAAAERAhIDEyExBBRBUWFxkQUigaGxQlLBMmLR4fHw/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAJREAAgICAgMAAQUBAAAAAAAAAAECEhETAyExQVFhBBQicYFS/9oADAMBAAIRAxEAPwD32WGWabAsN7D72wzZYZZpsCwbBsM2WGWabAsGwbDNlhlmmwLBsGwzZYZZpsCwbBsM2WGWabAsGwbDNlhlmmwLBsGwzZYZZpsCwbBsM2WGWabAsGwbDNlhlmmwLBsGwzZYZZpsCwbBsM2WGWabAsGwbDNlhlmmwLBsGwzZYZZpsCwbBsM2WGWabAsGwbDNlhlmmwLBsGwzZYZZpsCwbBsMuWBqsAmwXNFoWj7QtPBsPJcRaFo+0LRsFxFoWj7QtGwXEWhaPtC0bBcRaFo+0LRsFxFoWj7QtGwXEWhaPtC0bBcRaFo+0LRsFxFoWj7QtGwXEWhaPtC0bBcRaFo+0LRsFxFoWj7QtGwXEWhaPtC0bBcRaFo+0LRsFxFoWj7QtGwXEWhaPtC0bBcRaFo+0LRsFxFoDrQGwXHWhaXJPL2cci7QtGAOxkXaFowB2Mi7QtGAOxkXaFowB2Mi7QtGAOxkXaFowB2Mi7QtGAOxkXaFowB2Mi7QtGQTlvsVZZLCrQtGuloKaZHYsKtC01U4aXkvB0XG/ZnYYrQtNjQurC7exHxyXgKZntC0ZAHPs3kXaFowB2Mi7QtGAOxkXaTaNpokmmjU0oyZLlFgAPkg60RizFAEhJipiwAEhIqLAASEiosABISKiwAEhIqLAASEiosABISKiwAEk0qRUWIJSktYTQjS4++xYvSoJkrISdksGcliEoIkJAyWkJKyElGS0hJWQkDJXFp6ixzK5Zylx5fRVIWkXVJayCJChjyLEwiroJkJK4oWJCSJCSksDAhsAMiwKyElqee5YCshIqLlgKyEiouWArISKi5YCshIqLlgIBCouSiypIpJkqiW4OksishJai5eQkpISXAuXkJKSTIwLFpJKSFwwLFwRSQuLgWGSQUkJAsMkJIw6G/A3JXdlUWy5FyVqL14TW2oqSNfSWwRISRBDMYFy0hJWQkYFy0gUkBglygEAdMHmsSSlJbBol+OpqSjY0oG49mNprcEp2NjK0UJTHUULUWuH7sriYLXk0gWiNYRjpob2HYWD1fsNWhMlUERIkXiYc7b/kvISXBoy1JrcmmlvZGl0z0L0IzQiiZ6eHq6wgrwGuzNcgaojdEIwsDq9X+BroXZFpCSpIqSMmNgxtrJanh+79jQyCVRKrIl8N2YjEpdO5sbK1qVDI4ozJL0Y5CSjZahNuEYwcbEyXwqZce42nAXXUvRQk5RpQOiT9jQKyEnQ65LGXiaYc9/yaJIeplrJJdoyKh9mVfk3SVrpT0ZmhhxMQQFahwVkzg4uRIFWyRUWKSEjquGfRyLpwu+h7axPG7ryjRgPQvcJp00JuM0PRHkwhtwXCriZFC7BlwXCpLQKl2F7i1OotIvcSppT+jIRDXYpeF5KmroamTcJvC8VLsHXBcJvC8VGwdcFwm8LxUbB1wXCbwvFRsHSKqcEXkOmRUjnnwSqFVuRThqnbqWWgNipMr/AELguKwToXAsybguKMi4VJsGXBcLuC4tSbRlwXC7guFRtJqoTcsRi4carb8DriJFTEmmZrX2YGqQFUYr+SbiKoZoWDT2K14C6afgWR6HxSwLop6JDHgT2G0UwoJky5HSPEsdmDFot39yt50K6U1DM2Hwa669v9m1NY7OE/08lL+PgRcgvN9NKWySIroT3SZLov7aX0w3heHF8O6VdTquq6ox5x2irLKPJyOUHiRsvC8x5wZxdZjabLwvMeaGcNY2my8LzHmlqMQUC5cmu8FVInNDNM1Zu35Htk0GfODNFWVTWTXoTcY84M0lGb2my4LgwcDrV7f5NCoS6I5tpHojxyay+jJUyt5sqw6X0Rnq4TVa6de/oVSXszPhmvBGHS6tvcfTw666jFC0RMmHJneHFFLvspk09ilXDrpp9x0gTLNPjg/RgxaHTv7lEzo1JPRnM4qmx+Hs/wCDrB26PFzcVO14LySmZc0M06UZwujXcBkzSBQbTrZgZhzeZG4NbrcL6vojm+PB71yZ6NuYGYUWB5YurBqlayu/YxhG/wCQ7MDMLLCXYTjYL/T9fHkLBWpIZmBmCuXq7oViKqndexVFMy3JGl4hwONVlbp6br0Z18OXrsv4HNLaE/VSdISozjy8W1fDzrxPILE8m74j8Lu+bCil9adqX6djjYeBiOuyIa1beyXRz1PbBwms5PncnDOEsYN3MEZ6Iq+GuNK9fKhfk5lddSqsad3Zat+nc1CMZeGZnGcfKOrzAcwYKsDGSmyr7N+ycmXmjS4k/BluS8o7PMBzBxubI5vya0EudrmA5g5ODjOupUrdv/zO9w+FRQtlU+revt2OXJFQ8nXji5mfmDf8M+aa300Xr3F4qoqUOleuz9yeGaoptTnV6+rOE3mOEj0cfHWeX4OrmBmHP5gFjnn1nr2nQzAzDDRiyXv8koaUzamTJkzwzyUZq6NaZN5jzwziUYubLjH8RU0Pwrl9N/sGaFVcmoxw8mZu0Wji011PZVP6MYk+rjwdaV3KV/No0n6no2/g8f7XHs5TnugG4nCKX8zXjeAN2Ry0v4WyK5aS0X6tkb+F+WlLd9fLL04mkCaKXS5exwlJyWGfTjxqL6NqLUuDJnBnHKjOhsvC8x5wZw1lybLyteplzgzhQmRuJp5Ih9hecGcawyYJeIJronqWxKpE6m4oy4kqh+gPAU3KJiJjWN4ko64B4hrDM0QVVRucn4vwd7VdK1birz/czrJ3FcbBlNKNY9EdITpLJifCpLDOXw3BUUbpVPu9fZGltbQvYmrhqk0lrPY10/DtPmq18bI3PkXlsyuHHSRzsPh6Kar6VDhrTbXwPvH0cC7tXNPfZvwaquFoaiI89TEuVf2VcJzry9KqeqTfomaMPgF+pt9o00NqhaGZci9Glw/Tk0sbmGvHwKa9dnG/+SvDfDk/6m/MaImyOMsq4n6M2aSq29pZ0quAw2oSjzLkfg4SpSS/75ZzfNH0jS4WcbMDMOpxPC01tN9N40ldmCwaP20+38l2rHgmpnOVRafIcfgqj5qduq7GKnEbcKW3sjpFWWUSuDbcasHDdSnZGSjhK9JiJUqdY6nUVaOXI/huMPpmxeFe6c/Yz1Yh0bzJicKqqnVMJ9FvPUzCX/RZQ+GZ1gOfAr91X2JOlomNbK11Nbpr1UEZ50qqk1Dhrscb4lg5bup/pf2fYzxtSeGepRyNvQp1OY+5hzgzj0LiNajbVU/UrVitbmTPDOLrGo08wHMGH6ka9zetDUb+YDmDBV4clL35GtDUdLmC+FXVVpSnV6amLgMF4lapmFvU+1J6fCVNCtpUJdDhzSUOl5MuGDk1YGItXRV+fwKoqdbt1mdusnezEUVNN10K6InwcVzP2iYRlwvh7jVpfcz8Vw9VGu679vU615FbTTT1TUNeDC5ZZ7Jg5HCVS9m9GaXWbqIWiUdkiMbBVSh/R9UHyJvwXBgbQmrEgq64bT3TaZCq6w/WDskaoXprk0UpepheNGxHMFcGxQ6FLScjM45fMBzBNTFGdTODOOXzBOeTUKM6ecGac6rEaGJ92TWKl8apN26NONHr1CnhqaHdTMxHj6E04iRF67svZKlswM0RXjwMwcGrE1Shfue3+xhJZZal84M4avhv979hHEcDXTqvnXjR+xE4P2TCJeKBz80k66y0OjnieKqVdLpnfZ9nIAc0sdnTBno4LDS1ub7y1+DBx+Blw05pemu6fYAO/FJ2XZ0g3kyZoZoAezCO2AzQzQAYQDONfA4OZq3FK92+wAc+V1jlGZdI63D00Yc2qJiXq2x3MAB4Ws+Tg1kFjlljoAMuKJgZg4lzj3NaqQAcZrsw/IKpInMQAZwZIuW5N6ACYBg43gqKvmU0tbxon9DjcXhujWZW07NEAev9PN5wduNvwIprnqFz7gB7TsWpr8yN5gAI0mA5gOYIAlUTCNvw6jMbdT+Vfd9js0V006JJeiADwc3cmjhPyUx6KK/6lPnZ+4ynESULRLRABz/BgnORGciQJgYMuLw+HU3U6dXvugADVn9Lln//2Q==);
+            overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5em;
+        }
+        header {
+
+          height: 150px;
+    background-image: url(data:image/jpeg;base64,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);
+    transition: background-image 1s ease, transform 1s ease, box-shadow 1s ease;
+    overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 25px;
+}
+
+header:hover {
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-nubes-estilo-corte-papel_706661-135.jpg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-position: top;
+}
+        button {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    </style>
+    <style>
+        body {color: black;
+        }
+    </style>
+    <style>
+        table {background-color: white
+        }
+        h2 {
+  font-family: "Frijole", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+    </style>
+    <style>
+        h2 {
+            color: red;
+            background-color: darkred;
+        }
+  h3 {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+    </style>
+    <style>
+        h3 {
+            color: white;
+        }
+    </style>
+    <style>
+        h1 {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    </style>
+    <style>
+        .holis {
+            background-color: darkred;
+        }
+        .holas {
+            background-color: black;
+        }
+        .holes {
+            background-image: url();
+        }
+    </style>
+   <style>
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .icon-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .button-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-button {
+            background-image: url(https://img.rtve.es/imagenes/por-estrellas-solo-brillan-noche/1682336188585.jpg);
+            color: white;
+            padding: 10px 20px;
+            border: skyblue;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-image: url(https://www.shutterstock.com/image-vector/rose-pink-stars-sprocket-shiny-260nw-1954017985.jpg);
+            border-radius: 20px;
+        }
+
+        .dropdown.show .dropdown-content {
+            display: block;
+        }
+    </style>
+    <style>
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; 
+    margin: 0;
+    padding: 20px;
+}
+
+</style>
+<style>
+.menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-inline: 10px;
+  background-image: url(https://wallpapers.com/images/hd/purple-gradient-background-2560-x-1600-rmfznb3wauiky4u8.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-item {
+  position: relative;
+  background: #000; 
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+  border: 2px solid #ff4f8b;
+  backdrop-filter: blur(10px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.menu-item p {
+  margin: 0;
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 400;
+  background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.menu-item img {
+  width: 90%;
+  max-height: 460px;
+  object-fit: contain;
+  background-color: #111;
+  display: block;
+  border-bottom: 4px solid #000;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+.menu-item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item:hover {
+  background-image: url(https://img.pikbest.com/back_our/20201230/bg/b5bb1ec670600.png!w700wp);
+  background-blend-mode: overlay;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(255, 20, 147, 1);
+  width: 100%;
+}
+
+/* Fuente global */
+body {
+  font-family: 'Comico', sans-serif;
+  font-size: 40px;
+}
+
+/* Botones con degradado de texto */
+.an, .hom, .ya {
+  font-size: 20px;
+  font-weight: 400;
+  background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.lol {
+    margin-top: 10px;
+    border-radius: 80px;
+}
+.nas {
+      border-radius: 25px;
+      font-size: 20px;
+      padding: 10px;
+      width: 100px;
+      position: absolute;
+      margin-top: -320px;
+      border: 5px solid   #66ff99;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    .nas a {
+    text-decoration: none;
+    color: inherit;
+  }
+</style>
+<button class="nas"><a href="/media/cris/F8DB-D788/pagina/index.html">Inicio</a></button>
+<h1 class="nn" style="text-align:center">FUNCIONES DEL CUERPO HUMANO</h1>
+
+<div class="menu">
+  <div class="menu-item"><a href="videoanato.html">
+      <img class="lol" src="cuerpohumano2.jpg" alt="Cuerpo humano">
+      <p>Cuerpo humano</p></a></div>
+
+  <div class="menu-item"><a href="videosisinm.html">
+      <img class="lol" src="inmunologico.jpg" alt="Sistema inmunológico">
+      <p>Sistema inmunológico</p></a></div>
+
+  <div class="menu-item"><a href="videosisos.html">
+      <img class="lol" src="oseo2.jpg" alt="Sistema óseo">
+      <p>Sistema óseo</p></a></div>
+
+  <div class="menu-item"><a href="videoendo.html">
+      <img class="lol" src="endocrino2.jpg" alt="Sistema endocrino">
+      <p>Sistema endocrino</p></a></div>
+
+  <div class="menu-item"><a href="videosismus.html">
+      <img class="lol" src="muscular2.jpg" alt="Sistema muscular">
+      <p>Sistema muscular</p></a></div>
+
+  <div class="menu-item"><a href="videosiscir.html">
+      <img class="lol" src="circula2.jpg" alt="Sistema circulatorio">
+      <p>Sistema circulatorio</p></a></div>
+
+  <div class="menu-item"><a href="videores.html">
+      <img class="lol" src="respiratorio2.jpg" alt="Sistema respiratorio">
+      <p>Sistema respiratorio</p></a></div>
+
+  <div class="menu-item"><a href="videosisner.html">
+      <img class="lol" src="nervioso2.jpg" alt="Sistema nervioso">
+      <p>Sistema nervioso</p></a></div>
+
+  <div class="menu-item"><a href="videosisdig.html">
+      <img class="lol" src="digestivo2.jpg" alt="Sistema digestivo">
+      <p>Sistema digestivo</p></a></div>
+
+  <div class="menu-item"><a href="videosisteg.html">
+      <img class="lol" src="tegumentario2.jpg" alt="Sistema tegumentario">
+      <p>Sistema tegumentario</p></a></div>
+
+  <div class="menu-item"><a href="videosisrep.html">
+      <img class="lol" src="reproductor2.jpg" alt="Sistema reproductor">
+      <p>Sistema reproductor</p></a></div>
+
+  <div class="menu-item"><a href="videosisexc.html">
+      <img class="lol" src="excretor.jpg" alt="Sistema excretor">
+      <p>Sistema excretor</p></a></div>
+
+  <div class="menu-item"><a href="videosisart.html">
+      <img class="lol" src="articular.jpg" alt="Articulaciones">
+      <p>Articulaciones</p></a></div>
+
+  <div class="menu-item"><a href="videosissen.html">
+      <img class="lol" src="sentidos3.jpg" alt="Los sentidos">
+      <p>Los sentidos</p></a></div>
+
+  <div class="menu-item"><a href="videossisdie.html">
+      <img class="lol" src="dientes2.jpg" alt="Los dientes">
+      <p>Los dientes</p></a></div>
+</div>
+</table>
+</body>
+</html>

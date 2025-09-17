@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+    body, .btn-atras {
+      font-family: 'Comico', sans-serif;
+    }
+    p, h1, h2, h3, li, .btn-atras {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold',sans serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;tyle>
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 9px 8px rgba(173, 216, 230, 0.5);
+      margin-left: 20px;
+      margin-top: -3.5cm;
+      position: absolute;
+      border: 2px solid #ff4f8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="E:\pagina\CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+  <div>
+<a href="prueba.html"><button class="btn-atras">Atrás</button></a>
+</div>
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: calc(100vh - 200px); 
+    }
+
+    .left, .right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left, .right {
+      width: 50%;
+      height: 110%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 108.5%;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.left-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  
+  background-image: url(https://us.123rf.com/450wm/razlomov/razlomov1507/razlomov150700023/42151350-muchas-c%C3%A9lulas-de-sangre-con-efecto-de-enfoque-3d-prestados-sobre-fondo-claro.jpg?ver=6);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: local; 
+  background-color: rgba(255, 255, 255, 0.7); 
+  background-blend-mode: overlay;
+}
+
+
+    .right {
+      background-color: #e1f5f9;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+       <h1>SISTEMA CIRCULATORIO</h1>
+      <p>Es el sistema que transporta la sangre por todo el cuerpo. La sangre lleva oxígeno y nutrientes a los órganos y recoge los desechos para eliminarlos.</p>
+      <h3>Órganos</h3>
+       <p><strong>Vasos cerebrales:</strong> Son los que llevan sangre al cerebro. Le dan oxígeno para que piense y funcione bien.</p>
+       <p><strong>Vasos de las extremidades superiores:</strong> Son los que llevan sangre a los brazos y manos. Les dan fuerza y movimiento.</p>
+      <p><strong>Corazón:</strong> Es el órgano principal. Funciona como una bomba que hace que la sangre circule por todo el cuerpo.</p>
+      <p><strong>Vasos pulmonares:</strong> Llevan sangre entre el corazón y los pulmones. En los pulmones, la sangre agarra oxígeno y suelta el dióxido de carbono.</p>
+      <p><strong>Vasos intestinales:</strong> Llevan los nutrientes de los alimentos desde los intestinos hacia la sangre.</p>
+      <p><strong>Vasos hepáticos:</strong> Llevan la sangre desde el hígado o hacia él. Ayudan a limpiar sustancias dañinas y transportar nutrientes.</p>
+      <p><strong>Vasos sanguíneos renales:</strong> Llevan sangre a los riñones y la traen de vuelta. Ahí se filtra la sangre para eliminar desechos.</p>
+       <p><strong>Vasos de las extremidades inferiores:</strong> Llevan sangre a las piernas y pies. Les dan energía y recogen lo que ya no sirve.</p>
+      <p><strong>Capilares:</strong> Son vasos muy delgados que conectan arterias con venas. Permiten que el oxígeno y los nutrientes pasen a las células.</p>
+      <h3>¿Por qué es importante?</h3>
+       <li> Lleva oxígeno y alimentos a todo el cuerpo.</li>
+        <li>Ayuda a eliminar lo que el cuerpo no necesita.</li>
+        <li>Hace que el corazón bombee sangre sin parar.</li>
+        <li>Ayuda a protegernos de enfermedades (porque en la sangre hay defensas).</li>
+
+      <h3>¿Cómo cuidarlo?</h3>
+      <ul>
+      <li>  Comer frutas, verduras y alimentos con fibra</li>
+      <li>Comer sano y evitar mucha grasa</li>
+      <li> Hacer ejercicio regularmente</li> 
+      <li> Dormir bien </li>
+       <li>No fumar ni estar cerca del humo </li>
+       <li>Estar tranquilo y evitar mucho estrés </li>
+      <li> Tomar agua </li>
+      </ul>
+    </div>
+    </div>
+    <div class="right">
+      <img src="imagen sis circula.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>

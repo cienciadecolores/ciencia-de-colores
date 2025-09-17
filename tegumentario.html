@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+    body, .btn-atras {
+      font-family: 'Comico', sans-serif;
+    }
+
+    p, h1, h2, h3, li, .btn-atras {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold', serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;tyle>
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 9px 8px rgba(173, 216, 230, 0.5);
+      margin-left: 20px;
+      margin-top: -3.5cm;
+      position: absolute;
+      border: 2px solid #ff4f8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="E:\pagina\CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+  <div>
+<a href="prueba.html"><button class="btn-atras">Atrás</button></a>
+</div>
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: calc(100vh - 200px);
+    }
+
+    .left, .right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 108.5%;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.left-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  
+  background-image: url(https://media.istockphoto.com/id/1253907290/es/vector/concepto-nacional-diverso-o-de-raza-diversa-la-gente-se-aglomera.jpg?s=612x612&w=0&k=20&c=kwLsDVl7LAwcNuRevYFMWZ-fEJ2CzOtJMx8wxlDz3j8=);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: local; 
+  background-color: rgba(255, 255, 255, 0.5); 
+  background-blend-mode: overlay;
+}
+
+
+    .right {
+      background-color: #e1f5f9;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+       <h1>SISTEMA TEGUMENTARIO</h1>
+      <p> Es el sistema que está formado por la piel, el cabello y las uñas. La piel es el órgano más grande del cuerpo y cubre todo por fuera para protegernos.</p>
+      <h3>Órganos</h3>
+      <p><strong>Glándula sebácea:</strong> Produce una grasa natural llamada sebo, que mantiene la piel y el cabello suaves y protegidos.</p>
+<p><strong>Epidermis:</strong> Es la capa más externa de la piel. Protege el cuerpo del sol, los microbios y los golpes.</p>
+<p><strong>Dermis:</strong> Es la capa debajo de la epidermis. Contiene vasos sanguíneos, nervios, glándulas y ayuda a mantener la piel fuerte.</p>
+<p><strong>Tejido cutáneo:</strong> Es el conjunto de capas que forman la piel. Protege y cubre todo el cuerpo.</p>
+<p><strong>Folículo piloso:</strong> Es el lugar en la piel donde nace y crece cada pelo o cabello.</p>
+<p><strong>Arteria:</strong> Lleva sangre con oxígeno y nutrientes desde el corazón hasta la piel.</p>
+<p><strong>Vena:</strong> Lleva la sangre con desechos desde la piel de vuelta al corazón.</p>
+<p><strong>Tejido graso:</strong> Es la capa más profunda de la piel. Ayuda a mantener el calor y protege el cuerpo de golpes.</p>
+<p><strong>Nervio:</strong> Permite que sintamos cosas como calor, frío, dolor o cosquillas en la piel.</p>
+<p><strong>Vaso linfático:</strong> Ayuda a defender el cuerpo contra enfermedades y a eliminar líquidos sobrantes.</p>
+<p><strong>Glándula sudorípara:</strong> Produce el sudor, que ayuda a enfriar el cuerpo cuando hace calor.</p>
+<p><strong>Tallo de pelo:</strong> Es la parte del cabello que sale por fuera de la piel. Nos ayuda a protegernos del sol y el frío.</p>
+      <h3>¿Por qué es importante?</h3>
+       <li> Protege el cuerpo de golpes, microbios y el sol.</li>
+       <li>Ayuda a regular la temperatura del cuerpo (por ejemplo, cuando sudamos).</li>
+      <li> Permite sentir cosas como el calor, el frío o el dolor.</li>
+      <li> Evita que el cuerpo pierda demasiada agua.</li>
+      <li> Las uñas y el cabello también protegen y ayudan a tocar y agarrar cosas.</li>
+      <h3>¿Cómo cuidarlo?</h3>
+      <ul>
+     <li> Lavarse la piel todos los días con agua y jabón </li>
+    <li>  Usar protector solar para evitar quemaduras del sol </li>
+     <li> No rascarse ni tocar granitos con las manos sucias </li>
+    <li> Comer frutas y verduras para tener la piel sana</li> 
+    <li> Cortarse las uñas con cuidado y mantenerlas limpias</li> 
+    <li> No usar productos muy fuertes en la piel sin preguntar a un adulto </li>
+      </ul>
+    </div>
+    </div>
+    <div class="right">
+      <img src="imagen sis tegumentario.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>

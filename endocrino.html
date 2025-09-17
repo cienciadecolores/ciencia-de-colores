@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    body, .btn-atras {
+      font-family: 'Comico', sans-serif;
+    }
+
+    p, h1, h2, h3, li, .btn-atras {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold', serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;tyle>
+    }
+    .btn-atras {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffb3c6;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 9px 8px rgba(173, 216, 230, 0.5);
+      margin-left: 20px;
+      margin-top: -3.5cm;
+      position: absolute;
+      border: 2px solid #ff4f8b;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="E:\pagina\CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+  <div>
+<a href="prueba.html"><button class="btn-atras">Atrás</button></a>
+</div>
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: calc(100vh - 200px); 
+    }
+
+    .left, .right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 110%;
+  padding: 20px;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.left-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrPLJLCu71EovoXeCe0vqiyCs4JkU274WAQ&s);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: local; 
+  background-color: rgba(255, 255, 255, 0.4); 
+  background-blend-mode: overlay;
+}
+
+    .right {
+      background-color: #e1f5f9;
+    }
+
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+       <h1>SISTEMA ENDOCRINO</h1>
+      <p>Es el sistema que produce y controla las hormonas, que son sustancias que viajan por la sangre y ayudan a que el cuerpo funcione bien (como crecer, dormir, sentir hambre, tener energía o cambiar en la adolescencia).</p>
+      <h3>Órganos</h3>
+     <p><strong>Glándula pineal:</strong> Está en el cerebro. Controla el sueño produciendo una hormona llamada melatonina.</p>
+     <p><strong>Hipotálamo:</strong> Está en el cerebro. Controla muchas funciones del cuerpo y da órdenes a otras glándulas.</p>
+      <p><strong>Glándula pituitaria:</strong> También se llama hipófisis. Es la “glándula maestra” porque controla a muchas otras glándulas.</p>
+      <p><strong>Tiroides:</strong> Está en el cuello. Controla el metabolismo, que es cómo el cuerpo usa la energía.</p>
+      <p><strong>Paratiroides:</strong> Son glándulas muy pequeñas al lado de la tiroides. Controlan el calcio en la sangre y los huesos.</p>
+      <p><strong>Timo:</strong> Está en el pecho. Ayuda a que el sistema inmunológico se forme bien en los niños.</p>
+      <p><strong>Glándulas suprarrenales:</strong> Están sobre los riñones. Producen hormonas para reaccionar al estrés y controlar la presión.</p>
+      <p><strong>Páncreas:</strong> Produce insulina, una hormona que controla la cantidad de azúcar en la sangre.</p>
+      <p><strong>Ovarios:</strong> Son órganos femeninos. Producen hormonas como los estrógenos y también los óvulos.</p>
+      <p><strong>Testículos:</strong> Son órganos masculinos. Producen testosterona y los espermatozoides.</p>
+      <h3>¿Por qué es importante?</h3>
+        <li>Controla el crecimiento del cuerpo.</li>
+       <li> Regula el sueño, la temperatura, el hambre y las emociones.</li>
+       <li>  Hace que el cuerpo funcione bien por dentro.</li>
+       <li> Activa los cambios en la pubertad.</li>
+
+      <h3>¿Cómo cuidarlo?</h3>
+      <ul>
+        <li>dormir bien</li>
+        <li>comer sano</li>
+        <li>hacer ejercicio</li>
+        <li>evitar el estres</li>
+        <li> evitar medicamentos sin receta</li>
+        <li>Hablar con un adulto si se siente algo extraño en el cuerpo</li>
+      </ul>
+    </div>
+    </div>
+    <div class="right">
+      <img src="imagenendo.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>

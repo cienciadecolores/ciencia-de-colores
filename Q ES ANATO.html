@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Ciencia de Colores</title>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', 'Segoe UI', cursive;
+      background: linear-gradient(1000deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+      margin-right: 20px;
+    }
+
+    
+    .titulo-con-imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 20px;
+
+    }
+
+    .imagen-circular {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .titulo-principal {
+      font-family: 'Rockwell Extra Bold', serif;
+      font-size: 60px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(to right, #ffd1dc, #ffecd2, #c1f0f6, #d0e6a5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-right: -20px;
+      border-radius: 25px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      width: 100%;
+    }
+
+    .an, .hom, .ya {
+      font-size: 15px;
+      border-radius: 25px;
+      padding: 15px 8px;
+      cursor: pointer;
+      border: 2px solid #AEC6CF;
+      animation: pulse 2s infinite;
+      width: 100%;
+      margin-left: 45px;
+    }
+    .an { background-color: #ff6fa0; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5); }
+    .hom { background-color: #AEC6CF; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5); }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 50px;
+      background: linear-gradient(to right, #b5ead7, #ffdac1, #c7ceea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sistemas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sistema {
+      background-color: transparent;
+      border-radius: 15px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .sistema:hover {
+      transform: scale(1.05);
+    }
+
+    .sistema img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .sistema h3 {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #555;
+    }
+    .k {
+    margin-top: 0px;
+    width: 700px;
+    }
+  </style>
+</head>
+<body>
+  <div class="titulo-con-imagen">
+    <img src="logo.png" alt="Imagen Circular" class="imagen-circular">
+    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+  </div>
+
+  <header>
+    <img src="images.jpg" alt="Logo Izquierdo" class="logo">
+    <div class="menu">
+      <a href="Q ES ANATO.html"><button class="an">¿QUÉ ES ANATOMÍA?</button></a>
+      <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
+      <a href="videos.html"><button class="an">VIDEOS</button></a>
+      <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
+    </div>
+    <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
+  </header>
+  <style>
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #f9d0f0, #86dfe5);
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    @font-face {
+      font-family: 'Rockwell Extra Bold';
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .an, .hom, .ya {
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      animation: pulse 2s infinite;
+      font-size:15px;
+      border-radius: 25px;
+      padding:25px 8px;
+      cursor: pointer;
+    }
+
+    .an { background-color: #ff6fa0; }
+    .hom { background-color: #AEC6CF; border-color: #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5); }
+    .ya { background-color: #FFFF00; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .title {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
+    }
+
+    .container {
+      display: flex;
+      width: 100vw;
+      height: 1000px;
+      background-color: #C1D8FF;
+    }
+
+    .left, .right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .left {
+      background-color: #f9e1e8;
+      height: 1000px;
+      border-radius: 20px;
+    }
+
+    .left-content {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 20px;
+      overflow-y: auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      background-color: #C1D8FF;
+    }
+
+    .right {
+      background-color: #e1f5f9;
+      height: 1000px;
+      border-radius: 20px;
+    }
+
+    .right img {
+      width: 100%;
+      height: 850px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      margin-bottom: -70px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    h2, h3 {
+      margin-top: 15px;
+    }
+    body, .an, .hom, .ya, .nas {
+      font-family: 'Comico', sans-serif;
+    }
+
+    h1, h2, h3, text, p, .an, .hom, .ya, .nas {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .an, .hom, .ya {
+      font-family: 'Comico', sans-serif;
+    }
+
+    .an, .hom, .ya {
+      font-size: 20px;
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <style>
+    .nas {
+      border-radius: 25px;
+      font-size: 20px;
+      padding: 10px;
+      width: 100px;
+      position: absolute;
+      margin-top: -300px;
+      border: 5px solid   #66ff99;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    .nas a {
+    text-decoration: none;
+    color: inherit;
+  }
+  </style>
+<button class="nas"><a href="index.html">Inicio</a></button>
+  <div class="container">
+    <div class="left">
+      <div class="left-content">
+        <h1 style="text-align: center;">ANATOMIA</h1>
+        <p>La anatomía humana es como un manual del cuerpo: describe cómo está hecho, cuáles son sus partes y dónde están ubicadas. Es como un plano arquitectónico de nuestro cuerpo, que nos permite entender cómo funciona. 
+        <h2>¿Qué es?</h2>
+        <text>La palabra anatomía viene del idioma griego antiguo:
+
+“Ana” = hacia arriba o separar
+
+“Tomía” = cortar
+> Entonces, anatomía significa “cortar para ver por dentro”, porque los antiguos científicos estudiaban el cuerpo observando sus partes internas
+
+Hace muchos, muchos años (más de 2,000 años), en la antigua Grecia y Egipto, las personas querían entender cómo funcionaba el cuerpo. Uno de los más famosos fue Hipócrates, un médico griego que empezó a estudiar el cuerpo humano.
+
+Luego, en Roma, otro médico llamado Galeno hizo dibujos de órganos y escribió libros sobre cómo trabaja el cuerpo. Gracias a ellos, hoy sabemos mucho sobre cómo estamos hechos. 
+        <h3>Órganos:</h3>
+        Dentro de nuestro cuerpo tenemos órganos como el corazón, los pulmones, el estómago, el cerebro, etc., que hacen diferentes trabajos para que estemos bien. 
+        Huesos, músculos y tejidos:
+        Los huesos nos dan forma y nos ayudan a movernos, los músculos nos permiten movernos y los tejidos son los materiales con los que se hacen todos los órganos. 
+        <h3>Sistemas:</h3>
+        El cuerpo también está organizado en sistemas, como el sistema circulatorio (sangre), el sistema respiratorio (pulmones) y el sistema nervioso (cerebro). 
+        <h3>¿Por qué es importante?</h3>
+        Entender cómo funciona: La anatomía nos ayuda a comprender cómo funcionan las partes del cuerpo y cómo trabajan juntas. 
+        Cuidar nuestro cuerpo: Sabemos que podemos cuidarlo comiendo bien, haciendo ejercicio y evitando cosas que le hagan daño. 
+        Ayudar a otros: Los médicos utilizan la anatomía para entender y tratar enfermedades.</p></text>
+      </div>
+    </div>
+    <style>
+      .kas {
+        margin-top: -850px;
+        position: absolute;
+      }
+    </style>
+    <div class="right">
+      <h2 class="kas" style="text-align: center;">ANATOMÍA DE UN CUERPO HUMANO</h2>
+      <img src="anatos.jpg" alt="Imagen de anatomía">
+    </div>
+  </div>
+</body>
+</html>
+
+  
