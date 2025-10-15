@@ -1,4 +1,18 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Responsiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Título de la página</h1>
+        <p>Este es un párrafo que se adaptará a diferentes tamaños de pantalla.</p>
+    </div>
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,6 +32,27 @@ Padding:30px;
 Form{
 Edith:340px;
 }
+}
+    body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%; /* Ancho del 90% del dispositivo */
+    max-width: 960px; /* Ancho máximo para evitar que se vea muy ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
 }
     body {
   margin: 0;
@@ -258,4 +293,5 @@ header {
 </body>
 
 </html>
+
 
