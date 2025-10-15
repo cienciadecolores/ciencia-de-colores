@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
   <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
   <title>Explorando la Anatomía Humana</title>
   <style>
@@ -194,6 +195,27 @@ header {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    body {
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%; /* Ancho del 90% del dispositivo */
+    max-width: 960px; /* Ancho máximo para evitar que se vea muy ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}
 
   </style>
 </head>
@@ -257,6 +279,7 @@ header {
 </body>
 
 </html>
+
 
 
 
