@@ -195,73 +195,34 @@ header {
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1;
+}
     body {
     font-family: sans-serif;
 }
 
-/* 🔹 Ajustes responsivos reales para tu página */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .logo {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-  }
-
-  .menu {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .an, .hom, .ya {
-    font-size: 18px;
-    padding: 15px 10px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .title {
-    margin-top: 80px;
-  }
-
-  .colorful-title span {
-    font-size: 40px;
-  }
-
-  .subtitle-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .subtitle-block {
-    width: 90%;
-  }
-
-  .hero {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .logo3 {
-    width: 180px;
-    height: 180px;
-  }
-
-  .ñ {
-    position: static;
-    margin-top: 20px;
-    left: 0;
-  }
+.container {
+    width: 90%; /* Ancho del 90% del dispositivo */
+    max-width: 960px; /* Ancho máximo para evitar que se vea muy ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px;
 }
+
+h1 {
+    font-size: 2em; /* Tamaño de fuente relativo */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}
+
+
   </style>
 </head>
 <body>
+  <div class="container"> 
   <header>
     <img src="images.jpg" alt="Logo Izquierdo" class="logo">
       <a href="Q ES ANATO.html">
@@ -321,3 +282,4 @@ header {
 </body>
 
 </html>
+
