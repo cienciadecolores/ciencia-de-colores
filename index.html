@@ -21,10 +21,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 100vh;
-    }
-
-    body, .an, .hom, .ya, header {
+      min-height: 100vh;
       font-family: 'Comico', sans-serif;
     }
 
@@ -35,10 +32,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
     }
 
+    /* -------- HEADER -------- */
     header {
       display: flex;
       justify-content: space-between;
@@ -49,6 +45,7 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
+      text-align: center;
     }
 
     .logo {
@@ -59,47 +56,31 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    .menu {
-      display: flex;
-      gap: 15px;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 10px 30px;
-      border-radius: 50px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
     .an, .hom, .ya {
       font-weight: 400;
-      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
       font-family: 'Comico', sans-serif;
       font-size: 25px;
       border-radius: 25px;
-      padding: 25px 8px;
+      padding: 20px 15px;
       cursor: pointer;
       animation: pulse 2s infinite;
+      border: 2px solid #AEC6CF;
+      margin: 5px;
     }
 
     .an {
       background-color: #ff6fa0;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      box-shadow: 0 10px 20px rgba(173, 216, 230, 0.5);
     }
 
     .hom {
       background-color: #AEC6CF;
-      border: 2px solid #ff4f8b;
-      box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
+      box-shadow: 0 10px 20px rgba(255, 111, 160, 0.5);
     }
 
     .ya {
       background-color: #FFFF00;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+      box-shadow: 0 10px 20px rgba(173, 216, 230, 0.5);
     }
 
     @keyframes pulse {
@@ -108,27 +89,44 @@
       100% { transform: scale(1); }
     }
 
-    .title {
+    /* -------- HERO -------- */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
       text-align: center;
-      margin-top: 160px;
     }
 
-    .colorful-title span {
-      font-size: 60px;
-      font-family: 'Rockwell Extra Bold', serif;
-      font-weight: bold;
-      display: inline-block;
-      margin: 0 1px;
-      -webkit-text-stroke: 1.5px #555;
+    .logo3 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
     }
 
+    .k {
+      width: 700px;
+      max-width: 90%;
+      margin-top: 20px;
+    }
+
+    .xd, .dx {
+      width: 300px;
+      height: auto;
+      margin: 10px;
+    }
+
+    /* -------- MISION Y VISION -------- */
     .subtitle-container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       gap: 40px;
       max-width: 900px;
-      margin: 40px auto -30px auto;
+      margin: 40px auto;
       flex-wrap: wrap;
     }
 
@@ -156,104 +154,60 @@
       color: #666;
     }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      flex-wrap: wrap;
-      position: relative;
-    }
-
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-    }
-
-    .k {
-      margin-top: 0px;
-      width: 700px;
-      max-width: 90%;
-    }
-
-    .xd {
-      position: absolute;
-      top: 100px;
-      left: -205px;
-      width: 400px;
-      height: auto;
-    }
-
-    .dx {
-      position: absolute;
-      top: 100px;
-      left: 1165px;
-      width: 400px;
-      height: auto;
-    }
-
-    /* 🔹 Ajustes para pantallas pequeñas (celulares y tablets) */
+    /* ======== RESPONSIVO ======== */
     @media (max-width: 991px) {
       header {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
       }
 
-      .menu, a button {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+      header a {
+        display: block;
         width: 100%;
       }
 
       .an, .hom, .ya {
-        font-size: 18px;
-        padding: 15px 20px;
         width: 90%;
+        font-size: 18px;
+        padding: 15px 10px;
       }
 
       .logo {
         width: 80px;
         height: 80px;
-        margin-bottom: 10px;
+        margin: 5px 0;
       }
 
       .hero {
         flex-direction: column;
         margin-top: 20px;
-        text-align: center;
       }
 
       .logo3 {
         width: 180px;
         height: 180px;
-      }
-
-      .xd, .dx {
-        position: static;
-        width: 180px;
-        margin: 10px auto;
+        margin: 10px 0;
       }
 
       .k {
-        width: 90%;
+        width: 95%;
         max-width: 400px;
-        margin: 20px auto;
+      }
+
+      .xd, .dx {
+        width: 200px;
+        position: static;
+        margin: 15px auto;
       }
 
       .subtitle-container {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
-        padding: 10px;
       }
 
       .subtitle-block {
         width: 90%;
-        margin: 0 auto;
       }
     }
   </style>
@@ -261,7 +215,7 @@
 <body>
   <header>
     <img src="images.jpg" alt="Logo Izquierdo" class="logo">
-    <a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
+    <a href="Q ES ANATO.html"><button class="an">¿QUÉ ES ANATOMÍA?</button></a>
     <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
     <a href="videos.html"><button class="an">VIDEOS</button></a>
     <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
@@ -270,7 +224,6 @@
 
   <div class="hero">
     <img src="logo.png" alt="logo principal" class="logo3">
-    <div class="title colorful-title"></div>
     <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
     <img class="xd" src="human_cráneo-removebg-preview.png">
     <img class="dx" src="human_cráneo-removebg-preview.png">
