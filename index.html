@@ -11,20 +11,29 @@
       src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
       font-weight: bold;
     }
-
+    @media ( max-width:991px){
+body{
+Padding:20px;
+}
+Form{
+width:340px;
+}
+}
     body {
-      margin: 0;
-      padding: 0;
-      background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
-      color: #444;
-      overflow-x: hidden;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
+  color: #444;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+body, .an, .hom, .ya, header {
       font-family: 'Comico', sans-serif;
     }
-
     h1, h2, h3, text, p, .an, .hom, .ya, .nas {
       font-weight: 400;
       background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
@@ -32,212 +41,248 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
-
-    /* -------- HEADER -------- */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    .an, .hom, .ya {
+      font-family: 'Comico', sans-serif;
     }
 
     .an, .hom, .ya {
       font-weight: 400;
-      font-family: 'Comico', sans-serif;
-      font-size: 25px;
-      border-radius: 25px;
-      padding: 20px 15px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-      border: 2px solid #AEC6CF;
-      margin: 5px;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-    .an {
-      background-color: #ff6fa0;
-      box-shadow: 0 10px 20px rgba(173, 216, 230, 0.5);
-    }
-
-    .hom {
-      background-color: #AEC6CF;
-      box-shadow: 0 10px 20px rgba(255, 111, 160, 0.5);
-    }
-
-    .ya {
-      background-color: #FFFF00;
-      box-shadow: 0 10px 20px rgba(173, 216, 230, 0.5);
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
-    /* -------- HERO -------- */
-    .hero {
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.menu {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-      text-align: center;
-    }
-
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-    }
-
-    .k {
-      width: 700px;
-      max-width: 90%;
-      margin-top: 20px;
-    }
-
-    .xd, .dx {
-      width: 300px;
-      height: auto;
-      margin: 10px;
-    }
-
-    /* -------- MISION Y VISION -------- */
-    .subtitle-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      max-width: 900px;
-      margin: 40px auto;
-      flex-wrap: wrap;
-    }
-
-    .subtitle-block {
-      max-width: 400px;
-      flex: 1;
-      background-color: #FFF275;
-      border-radius: 25px;
-      border: 10px solid transparent;
-      padding: 10px 20px;
-      text-align: center;
-      color: #444;
-    }
-
-    .subtitle-block h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 22px;
-      color: #333;
-    }
-
-    .subtitle-block p {
-      font-size: 18px;
-      margin: 0;
-      color: #666;
-    }
-
-    /* ======== RESPONSIVO ======== */
-    @media (max-width: 991px) {
-      header {
-        flex-direction: column;
-        align-items: center;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
       }
 
-      header a {
-        display: block;
-        width: 100%;
-      }
+.an {
+  background-color: #ff6fa0;
+  border: 2px solid #AEC6CF;
+  box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+  animation: pulse 2s infinite;
+  font-size:25px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
 
-      .an, .hom, .ya {
-        width: 90%;
-        font-size: 18px;
-        padding: 15px 10px;
-      }
+}
+.hom {
+  background-color: #AEC6CF;
+  border: 2px solid #ff4f8b;
+  box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
+  animation: pulse 2s infinite;
+  font-size:25px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
+}
+.ya {
+  background-color: #FFFF00;
+  border: 2px solid #AEC6CF;
+  box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+  animation: pulse 2s infinite;
+  font-size:25px;
+  border-radius: 25px;
+  padding:25px 8px;
+  cursor: pointer;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 
-      .logo {
-        width: 80px;
-        height: 80px;
-        margin: 5px 0;
-      }
+.title {
+  text-align: center;
+  margin-top: 160px;
+}
 
-      .hero {
-        flex-direction: column;
-        margin-top: 20px;
-      }
+.colorful-title span {
+  font-size: 60px;
+  font-family: 'Rockwell Extra Bold', serif;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 1px;
+  -webkit-text-stroke: 1.5px #555;
+}
 
-      .logo3 {
-        width: 180px;
-        height: 180px;
-        margin: 10px 0;
-      }
+  .subtitle-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto -30px auto;
+    flex-wrap: wrap;
+  }
 
-      .k {
-        width: 95%;
-        max-width: 400px;
-      }
+  .subtitle-block {
+    max-width: 400px;
+    flex: 1;
+    background-color: #FFF275;
+    border-radius: 25px;
+    border: 10px solid transparent;
+    padding: 10px 20px;
+    text-align: center;
+    color: #444;
+  }
 
-      .xd, .dx {
-        width: 200px;
-        position: static;
-        margin: 15px auto;
-      }
+  .subtitle-block h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+  }
 
-      .subtitle-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
+  .subtitle-block p {
+    font-size: 18px;
+    margin: 0;
+    color: #666;
+  }
 
-      .subtitle-block {
-        width: 90%;
-      }
-    }
+ .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: :400px;
+  flex-wrap: wrap;
+}
+ .logo3{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  border:4px; solid white;
+  object-fit:cover;
+  }
+  .ñ {
+    position: absolute;
+    margin-top: 578px;
+    left: 1070px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+.k {
+    margin-top: 0px;
+    width: 700px;
+  }
+
+.xd {
+  position: absolute;
+  top: 100px;
+  left: -205px;
+  width: 400px;
+  height: auto;
+}
+
+.dx {
+  position: absolute;
+  top: 100px;
+  left: 1165px;
+  width: 400px;
+  height: auto;
+}
+
+/* 🔧 SOLUCIÓN SOLO PARA CELULAR */
+@media (max-width: 991px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    min-height: 100vh; /* ocupa toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .xd, .dx {
+    position: static;
+    width: 200px;
+  }
+
+  .k {
+    width: 90%;
+  }
+}
   </style>
 </head>
 <body>
   <header>
     <img src="images.jpg" alt="Logo Izquierdo" class="logo">
-    <a href="Q ES ANATO.html"><button class="an">¿QUÉ ES ANATOMÍA?</button></a>
-    <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
-    <a href="videos.html"><button class="an">VIDEOS</button></a>
-    <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
+      <a href="Q ES ANATO.html">
+      <button class="an">¿QUE ES ANATOMIA?</button>
+    </a>
+    <a href="prueba.html">
+      <button class="hom">SISTEMAS DEL CUERPO</button>
+    </a>
+    <a href="videos.html">
+        <button class="an">VIDEOS</button>
+</a>
+<a href="sugeren.html">
+      <button class ="ya">SUGERENCIA</button>
+</a>
     <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
   </header>
-
   <div class="hero">
-    <img src="logo.png" alt="logo principal" class="logo3">
+  <img src="logo.png"alt="logo principal" class="logo3">
+    <div class="title colorful-title">
+  </div>
     <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
     <img class="xd" src="human_cráneo-removebg-preview.png">
     <img class="dx" src="human_cráneo-removebg-preview.png">
   </div>
-
   <div class="subtitle-container">
-    <div class="subtitle-block">
-      <h3>MISIÓN</h3>
-      <p>Educar a sus estudiantes con fe, humildad, sencillez y valores para formar personas comprometidas con la sociedad.</p>
-    </div>
-    <div class="subtitle-block">
-      <h3>VISIÓN</h3>
-      <p>Ser una comunidad reconocida por su formación en valores cristianos, donde la humildad y la sencillez sean ejemplo de vida.</p>
-    </div>
+  <div class="subtitle-block">
+    <h3>MISIÓN</h3>
+    <p>Educar a sus estudiantes con fe,humildad,sencillez y los valores para formar personas comprometidas con la sociedad.</p>
   </div>
+  <div class="subtitle-block">
+    <h3>VISIÓN</h3>
+    <p>Ser una comunidad reconocida por su formación en valores cristianos, donde la humildad y la sencillez sean ejemplo de vida.</p>
+  </div>
+</div>
 </body>
 </html>
