@@ -11,6 +11,11 @@
       font-weight: bold;
     }
 
+    @media (max-width:991px){
+      body{ padding:20px; }
+      form{ width:340px; }
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -21,16 +26,21 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
+    }
+
+    body, .an, .hom, .ya, header {
       font-family: 'Comico', sans-serif;
     }
 
-    h1, h2, h3, p {
+    h1, h2, h3, text, p, .an, .hom, .ya, .nas {
       font-weight: 400;
       background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
 
     header {
@@ -38,10 +48,10 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
+      position: relative;
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      flex-wrap: wrap;
     }
 
     .logo {
@@ -68,7 +78,6 @@
       padding: 25px 8px;
       cursor: pointer;
       animation: pulse 2s infinite;
-      font-family: 'Comico', sans-serif;
     }
 
     .an {
@@ -95,51 +104,18 @@
       100% { transform: scale(1); }
     }
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      flex-wrap: wrap;
-      position: relative;
-      overflow: visible; /* permite que se vean completas */
-      gap: 60px; /* más espacio entre logo y bordes */
+    .title {
+      text-align: center;
+      margin-top: 160px;
     }
 
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      z-index: 2;
-    }
-
-    /* ==== LATERALES AJUSTADOS ==== */
-    .xd, .dx {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 380px; /* mantiene tamaño similar */
-      height: auto;
-      object-fit: contain; /* muestra imagen completa */
-      z-index: 1;
-      opacity: 0.95;
-    }
-
-    .xd {
-      left: -180px; /* un poco más afuera */
-    }
-
-    .dx {
-      right: -180px; /* un poco más afuera */
-    }
-
-    /* Texto central más pequeño */
-    .k {
-      width: 500px;
-      max-width: 80%;
-      z-index: 2;
+    .colorful-title span {
+      font-size: 60px;
+      font-family: 'Rockwell Extra Bold', serif;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0 1px;
+      -webkit-text-stroke: 1.5px #555;
     }
 
     .subtitle-container {
@@ -148,7 +124,7 @@
       align-items: flex-start;
       gap: 40px;
       max-width: 900px;
-      margin: 40px auto;
+      margin: 40px auto -30px auto;
       flex-wrap: wrap;
     }
 
@@ -164,27 +140,92 @@
     }
 
     .subtitle-block h3 {
-      font-size: 22px;
+      margin-top: 0;
       margin-bottom: 10px;
+      font-size: 22px;
+      color: #333;
     }
 
     .subtitle-block p {
       font-size: 18px;
+      margin: 0;
+      color: #666;
     }
 
-    /* ==== RESPONSIVE ==== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      gap: 40px; /* separa el logo de las imágenes laterales */
+    }
+
+    .logo3 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    /* ==== Ajuste principal ==== */
+    .xd, .dx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 400px; /* tamaño completo */
+      height: auto;
+      z-index: 1;
+    }
+
+    /* Más hacia los bordes */
+    .xd {
+      left: -160px; /* más alejado del logo */
+      object-position: left;
+    }
+
+    .dx {
+      right: -160px; /* más alejado del logo */
+      object-position: right;
+    }
+
+    /* Imagen central (texto de CIENCIA DE COLORES) más pequeña */
+    .k {
+      width: 500px; /* antes era 700px, ahora más proporcionado */
+      max-width: 80%;
+      z-index: 2;
+    }
+
+    /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        flex-wrap: wrap;
+      }
+
       .hero {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        position: relative;
+        min-height: 100vh;
+        gap: 15px;
       }
 
       .xd, .dx {
         position: relative;
         transform: none;
         width: 300px;
+        height: auto;
         margin: 10px auto;
         opacity: 0.9;
       }
@@ -200,17 +241,8 @@
       .k {
         width: 80%;
         max-width: 450px;
-      }
-    }
-
-    /* ==== Pantallas grandes (efecto más cinematográfico) ==== */
-    @media (min-width: 1400px) {
-      .xd {
-        left: -220px;
-      }
-
-      .dx {
-        right: -220px;
+        z-index: 2;
+        margin-top: 10px;
       }
     }
   </style>
@@ -227,6 +259,7 @@
 
   <div class="hero">
     <img src="logo.png" alt="logo principal" class="logo3">
+    <div class="title colorful-title"></div>
     <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
     <img class="xd" src="human_cráneo-removebg-preview.png">
     <img class="dx" src="human_cráneo-removebg-preview.png">
