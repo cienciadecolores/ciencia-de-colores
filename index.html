@@ -171,27 +171,28 @@
       z-index: 2;
     }
 
-    /* ==== CORRECCIÓN PRINCIPAL ==== */
+    /* ==== Ajuste principal ==== */
     .xd, .dx {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 400px;
+      width: 400px; /* tamaño completo */
       height: auto;
       z-index: 1;
     }
 
+    /* Más hacia los bordes */
     .xd {
-      left: 0;
+      left: -120px;
       object-position: left;
     }
 
     .dx {
-      right: 0;
+      right: -120px;
       object-position: right;
     }
 
-    /* ==== Ajuste responsivo real ==== */
+    /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
       html, body {
         height: 100%;
@@ -211,14 +212,13 @@
         min-height: 100vh;
       }
 
-      /* Las imágenes laterales se vuelven decorativas */
       .xd, .dx {
         position: relative;
         transform: none;
-        width: 60%;
-        max-width: 250px;
+        width: 300px;
+        height: auto;
         margin: 10px auto;
-        opacity: 0.8;
+        opacity: 0.9;
       }
 
       .xd {
