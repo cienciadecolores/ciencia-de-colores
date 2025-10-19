@@ -226,32 +226,55 @@ header {
     padding: 0;
   }
 
+  header {
+    flex-wrap: wrap;
+  }
+
   .hero {
     min-height: 100vh; /* ocupa toda la pantalla */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position;relative;
-    overflow;hidden;
+    position: relative;
+    overflow: hidden;
   }
 
-  header {
-    flex-wrap: wrap;
-  }
-
+  /* 🔹 Imágenes del cráneo (mitad músculo / mitad calavera) */
   .xd, .dx {
-    position:absolute;
-    top:10%;
-    height:auto;
+    position: absolute;
+    top: 10%;
     width: 150px;
-    opacity:0.9;
+    height: auto;
+    opacity: 0.9;
   }
-.dx {
- right: -40px; 
-}
+
+  .xd {
+    left: -40px;  /* se va más al borde pero visible */
+  }
+
+  .dx {
+    right: -40px; /* igual del otro lado */
+  }
+
   .k {
     width: 90%;
+    max-width: 400px;
+    z-index: 2;
+  }
+
+  .logo3 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .subtitle-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitle-block {
+    max-width: 90%;
   }
 }
   </style>
@@ -293,4 +316,5 @@ header {
 </div>
 </body>
 </html>
+
 
