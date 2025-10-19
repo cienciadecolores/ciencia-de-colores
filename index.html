@@ -125,7 +125,7 @@
       z-index: 2;
     }
 
-    /* ==== Imágenes laterales completas y más separadas del centro ==== */
+    /* ==== Imágenes laterales completas y más separación ==== */
     .xd, .dx {
       position: absolute;
       top: 65%;
@@ -136,12 +136,13 @@
       z-index: 1;
     }
 
-    .xd { left: -220px; } /* más hacia el lateral izquierdo */
-    .dx { right: -220px; } /* más hacia el lateral derecho */
+    .xd { left: -220px; } /* lateral izquierdo */
+    .dx { right: -300px; } /* lateral derecho más lejos para la ilusión */
 
+    /* CIENCIA DE COLORES un poco más grande */
     .k {
-      width: 500px;
-      max-width: 80%;
+      width: 580px; /* antes 500px */
+      max-width: 85%;
       z-index: 2;
     }
 
@@ -172,7 +173,7 @@
 
     @media (min-width: 1400px) {
       .xd { left: -260px; }
-      .dx { right: -260px; }
+      .dx { right: -380px; }
     }
   </style>
 </head>
