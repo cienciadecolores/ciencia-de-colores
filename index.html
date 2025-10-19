@@ -42,6 +42,8 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
+      z-index: 10;
+      position: relative;
     }
 
     .logo {
@@ -99,11 +101,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 60px; /* más espacio debajo del header */
       flex-wrap: wrap;
       position: relative;
-      overflow: visible; /* permite que se vean completas */
-      gap: 60px; /* más espacio entre logo y bordes */
+      overflow: visible;
+      gap: 60px;
     }
 
     .logo3 {
@@ -118,21 +120,21 @@
     /* ==== LATERALES AJUSTADOS ==== */
     .xd, .dx {
       position: absolute;
-      top: 50%;
+      top: 57%; /* bajadas para no chocar con el header */
       transform: translateY(-50%);
-      width: 380px; /* mantiene tamaño similar */
+      width: 380px;
       height: auto;
-      object-fit: contain; /* muestra imagen completa */
+      object-fit: contain;
       z-index: 1;
       opacity: 0.95;
     }
 
     .xd {
-      left: -180px; /* un poco más afuera */
+      left: -210px; /* más separadas del centro */
     }
 
     .dx {
-      right: -180px; /* un poco más afuera */
+      right: -210px; /* más separadas del centro */
     }
 
     /* Texto central más pequeño */
@@ -179,6 +181,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+        margin-top: 30px;
       }
 
       .xd, .dx {
@@ -206,11 +209,11 @@
     /* ==== Pantallas grandes (efecto más cinematográfico) ==== */
     @media (min-width: 1400px) {
       .xd {
-        left: -220px;
+        left: -250px;
       }
 
       .dx {
-        right: -220px;
+        right: -250px;
       }
     }
   </style>
