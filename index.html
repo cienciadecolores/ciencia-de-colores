@@ -105,7 +105,7 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-      flex-wrap: nowrap; /* todo en fila */
+      flex-wrap: nowrap;
     }
 
     .logo3 {
@@ -117,7 +117,7 @@
     }
 
     .k {
-      width: 500px;      /* tamaño del título */
+      width: 500px;
       max-width: 90%;
       height: auto;
       transition: transform 0.3s ease;
@@ -164,10 +164,13 @@
       .logo { width: 80px; height: 80px; margin: 5px 0; }
       .an, .hom, .ya { width: 90%; font-size: 18px; padding: 15px 10px; }
 
-      .hero { flex-direction: column; }
-      .xd, .dx { width: 200px; transform: translateX(0); margin: 10px auto; }
+      .hero { flex-direction: column; align-items: center; }
 
-      .hero-center { flex-direction: column; gap: 10px; }
+      /* mover las imágenes laterales a los bordes en móvil */
+      .xd { width: 150px; position: relative; left: -50px; }
+      .dx { width: 150px; position: relative; right: -50px; }
+
+      .hero-center { flex-direction: column; gap: 10px; align-items: center; }
       .logo3 { width: 150px; height: 150px; }
       .k { width: 90%; max-width: 350px; }
 
