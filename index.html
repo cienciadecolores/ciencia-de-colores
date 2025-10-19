@@ -90,56 +90,40 @@
 
     /* -------- HERO -------- */
     .hero {
-      position: relative;
+      position: relative; /* Para que las imágenes laterales se posicionen respecto a este contenedor */
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 30px;
+      gap: 20px;
+      flex-wrap: nowrap;
       text-align: center;
-      overflow: visible;
-    }
-
-    /* contenedores para cortar la mitad de las imágenes */
-    .xd-container, .dx-container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 50%; /* mostrar solo la mitad de la imagen */
-      overflow: hidden;
-      height: auto;
-      z-index: 1;
-    }
-
-    .xd-container {
-      left: 0;
-    }
-
-    .dx-container {
-      right: 0;
     }
 
     .xd, .dx {
-      width: 200%; /* el doble para que se vea solo la mitad */
+      width: 280px;
       height: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     .xd {
-      transform: translateX(-50%); /* mover la imagen hacia afuera para mostrar solo la mitad */
+      left: -140px; /* Se asoma solo la mitad de la imagen desde la izquierda */
     }
 
     .dx {
-      transform: translateX(50%); /* mover la imagen hacia afuera para mostrar solo la mitad */
+      right: -140px; /* Se asoma solo la mitad de la imagen desde la derecha */
     }
 
     /* contenedor central (logo + texto) */
     .hero-center {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      z-index: 2;
+      z-index: 1; /* Asegura que quede encima de las imágenes laterales */
     }
 
     .logo3 {
@@ -210,22 +194,20 @@
         padding: 15px 10px;
       }
 
-      .xd-container, .dx-container {
-        width: 40%; /* mostrar menos en celular */
+      .hero {
+        flex-direction: column;
       }
 
       .xd, .dx {
-        width: 250%; /* ajustar para que solo se vea la mitad */
+        position: relative;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 200px;
+        margin: 10px auto;
       }
 
-      .xd {
-        transform: translateX(-60%);
-      }
-
-      .dx {
-        transform: translateX(60%);
-      }
-
+      /* logo y texto en columna en celular */
       .hero-center {
         flex-direction: column;
         gap: 10px;
@@ -265,18 +247,14 @@
   </header>
 
   <div class="hero">
-    <div class="xd-container">
-      <img class="xd" src="human_cráneo-removebg-preview.png" alt="cráneo izquierdo">
-    </div>
+    <img class="xd" src="human_cráneo-removebg-preview.png" alt="cráneo izquierdo">
 
     <div class="hero-center">
       <img src="logo.png" alt="logo principal" class="logo3">
       <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png" alt="ciencia de colores">
     </div>
 
-    <div class="dx-container">
-      <img class="dx" src="human_cráneo-removebg-preview.png" alt="cráneo derecho">
-    </div>
+    <img class="dx" src="human_cráneo-removebg-preview.png" alt="cráneo derecho">
   </div>
 
   <div class="subtitle-container">
