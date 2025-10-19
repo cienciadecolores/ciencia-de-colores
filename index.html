@@ -42,8 +42,6 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap;
-      z-index: 10;
-      position: relative;
     }
 
     .logo {
@@ -52,6 +50,16 @@
       object-fit: cover;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
     }
 
     .an, .hom, .ya {
@@ -91,11 +99,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 70px; /* más abajo del header */
+      margin-top: 30px;
       flex-wrap: wrap;
       position: relative;
-      overflow: visible;
-      gap: 60px;
+      overflow: visible; /* permite que se vean completas */
+      gap: 60px; /* más espacio entre logo y bordes */
     }
 
     .logo3 {
@@ -107,28 +115,27 @@
       z-index: 2;
     }
 
-    /* ==== LATERALES EN COMPUTADORA ==== */
+    /* ==== LATERALES AJUSTADOS ==== */
     .xd, .dx {
       position: absolute;
-      top: 60%; /* bajadas un poco */
+      top: 50%;
       transform: translateY(-50%);
-      width: 380px;
+      width: 380px; /* mantiene tamaño similar */
       height: auto;
-      object-fit: contain;
+      object-fit: contain; /* muestra imagen completa */
       z-index: 1;
       opacity: 0.95;
-      overflow: visible;
     }
 
     .xd {
-      left: -240px; /* más separadas del centro */
+      left: -180px; /* un poco más afuera */
     }
 
     .dx {
-      right: -240px; /* más separadas del centro */
+      right: -180px; /* un poco más afuera */
     }
 
-    /* Texto central */
+    /* Texto central más pequeño */
     .k {
       width: 500px;
       max-width: 80%;
@@ -171,19 +178,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px;
-        margin-top: 40px;
+        gap: 20px;
       }
 
-      /* En celular las caras se ven completas y centradas */
       .xd, .dx {
-        position: static; /* ya no absolutas */
-        width: 320px;
-        height: auto;
-        object-fit: contain;
+        position: relative;
         transform: none;
+        width: 300px;
         margin: 10px auto;
-        opacity: 1;
+        opacity: 0.9;
       }
 
       .xd {
@@ -196,19 +199,18 @@
 
       .k {
         width: 80%;
-        max-width: 420px;
-        z-index: 2;
+        max-width: 450px;
       }
     }
 
-    /* ==== Pantallas grandes ==== */
+    /* ==== Pantallas grandes (efecto más cinematográfico) ==== */
     @media (min-width: 1400px) {
       .xd {
-        left: -280px;
+        left: -220px;
       }
 
       .dx {
-        right: -280px;
+        right: -220px;
       }
     }
   </style>
