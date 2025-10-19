@@ -6,11 +6,6 @@
   <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
   <title>Explorando la Anatomía Humana</title>
   <style>
-    @font-face {
-      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
-      font-weight: bold;
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -86,6 +81,7 @@
       gap: 20px;
       flex-wrap: nowrap;
       text-align: center;
+      position: relative;
       overflow: visible;
     }
 
@@ -99,7 +95,6 @@
     .xd { transform: translateX(-150px); }
     .dx { transform: translateX(150px); }
 
-    /* contenedor central (logo + Ciencia de Colores al lado) */
     .hero-center {
       display: flex;
       align-items: center;
@@ -166,11 +161,25 @@
 
       .hero { flex-direction: column; align-items: center; }
 
-      /* mover las imágenes laterales a los bordes en móvil */
-      .xd { width: 150px; position: relative; left: -50px; }
-      .dx { width: 150px; position: relative; right: -50px; }
+      /* Imagenes laterales pegadas a los bordes en móvil */
+      .xd, .dx {
+        width: 150px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
-      .hero-center { flex-direction: column; gap: 10px; align-items: center; }
+      .xd { left: 0; }
+      .dx { right: 0; }
+
+      .hero-center {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        position: relative;
+        z-index: 1; /* para que el logo y título queden encima */
+      }
+
       .logo3 { width: 150px; height: 150px; }
       .k { width: 90%; max-width: 350px; }
 
@@ -192,12 +201,10 @@
 
   <div class="hero">
     <img class="xd" src="human_cráneo-removebg-preview.png" alt="cráneo izquierdo">
-
     <div class="hero-center">
       <img src="logo.png" alt="logo principal" class="logo3">
       <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png" alt="ciencia de colores">
     </div>
-
     <img class="dx" src="human_cráneo-removebg-preview.png" alt="cráneo derecho">
   </div>
 
