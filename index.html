@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
   <title>Explorando la Anatomía Humana</title>
   <style>
@@ -13,12 +12,8 @@
     }
 
     @media (max-width:991px){
-      body{
-        padding:20px;
-      }
-      form{
-        width:340px;
-      }
+      body{ padding:20px; }
+      form{ width:340px; }
     }
 
     body {
@@ -31,7 +26,6 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
-      margin: 0;
     }
 
     body, .an, .hom, .ya, header {
@@ -79,18 +73,9 @@
     }
 
     .an, .hom, .ya {
-      font-weight: 400;
-      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
-      background-size: 300% 300%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      font-family: 'Comico', sans-serif;
+      font-size: 25px;
       border-radius: 25px;
-      font-size:25px;
-      padding:25px 8px;
+      padding: 25px 8px;
       cursor: pointer;
       animation: pulse 2s infinite;
     }
@@ -100,11 +85,13 @@
       border: 2px solid #AEC6CF;
       box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
     }
+
     .hom {
       background-color: #AEC6CF;
       border: 2px solid #ff4f8b;
       box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
     }
+
     .ya {
       background-color: #FFFF00;
       border: 2px solid #AEC6CF;
@@ -172,126 +159,93 @@
       margin-top: 30px;
       flex-wrap: wrap;
       position: relative;
+      overflow: visible;
+      gap: 40px;
     }
 
     .logo3 {
-      width:250px;
-      height:250px;
-      border-radius:50%;
-      border:4px solid white;
-      object-fit:cover;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      z-index: 2;
     }
 
-    .ñ {
+    /* ==== Imagen central completa ==== */
+    .k {
+      width: 500px;
+      max-width: 80%;
+      height: auto;
+      object-fit: contain; /* mantiene imagen completa */
+      z-index: 2;
+    }
+
+    /* ==== Imágenes laterales completas ==== */
+    .xd, .dx {
       position: absolute;
-      margin-top: 578px;
-      left: 1070px;
-      border-radius: 25px;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      max-width: 35vw;
+      height: 70vh;
+      object-fit: contain; /* mantiene imagen completa */
       z-index: 1;
     }
 
-    .k {
-      margin-top: 0px;
-      width: 700px;
-    }
+    .xd { left: -15vw; }
+    .dx { right: -15vw; }
 
-    .xd {
-      position: absolute;
-      top: 100px;
-      left: -205px;
-      width: 400px;
-      height: auto;
-    }
-
-    .dx {
-      position: absolute;
-      top: 100px;
-      left: 1165px;
-      width: 400px;
-      height: auto;
-    }
-
-    /* 🔧 SOLUCIÓN SOLO PARA CELULAR */
+    /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      header {
-        flex-wrap: wrap;
-      }
-
       .hero {
-        min-height: 100vh;
-        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
-        gap: 15px;
-        position: relative;
       }
 
-      .logo3 {
-        width: 120px;
-        height: 120px;
-      }
-
-      .k {
-        width: 55%;
-      }
-
-      /* Los cráneos a los costados */
       .xd, .dx {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 130px;
+        width: auto;
+        max-width: 50vw;
+        height: 50vh;
       }
 
-      .xd {
-        left: 5px;
-      }
+      .xd { left: -10vw; }
+      .dx { right: -10vw; }
 
-      .dx {
-        right: 5px;
+      .k {
+        width: 80%;
+        max-width: 450px;
       }
     }
+
   </style>
 </head>
 <body>
   <header>
     <img src="images.jpg" alt="Logo Izquierdo" class="logo">
-      <a href="Q ES ANATO.html">
-      <button class="an">¿QUE ES ANATOMIA?</button>
-    </a>
-    <a href="prueba.html">
-      <button class="hom">SISTEMAS DEL CUERPO</button>
-    </a>
-    <a href="videos.html">
-        <button class="an">VIDEOS</button>
-</a>
-<a href="sugeren.html">
-      <button class ="ya">SUGERENCIA</button>
-</a>
+    <a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
+    <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
+    <a href="videos.html"><button class="an">VIDEOS</button></a>
+    <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
     <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
   </header>
 
   <div class="hero">
-    <img class="xd" src="human_cráneo-removebg-preview.png">
     <img src="logo.png" alt="logo principal" class="logo3">
+    <div class="title colorful-title"></div>
     <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+    <img class="xd" src="human_cráneo-removebg-preview.png">
     <img class="dx" src="human_cráneo-removebg-preview.png">
   </div>
 
   <div class="subtitle-container">
     <div class="subtitle-block">
       <h3>MISIÓN</h3>
-      <p>Educar a sus estudiantes con fe,humildad,sencillez y los valores para formar personas comprometidas con la sociedad.</p>
+      <p>Educar a sus estudiantes con fe, humildad, sencillez y valores para formar personas comprometidas con la sociedad.</p>
     </div>
     <div class="subtitle-block">
       <h3>VISIÓN</h3>
