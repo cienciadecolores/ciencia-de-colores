@@ -52,6 +52,7 @@
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 10;
     }
 
     .logo {
@@ -62,16 +63,6 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    .menu {
-      display: flex;
-      gap: 15px;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 10px 30px;
-      border-radius: 50px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
     .an, .hom, .ya {
       font-size: 25px;
       border-radius: 25px;
@@ -80,23 +71,9 @@
       animation: pulse 2s infinite;
     }
 
-    .an {
-      background-color: #ff6fa0;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
-    }
-
-    .hom {
-      background-color: #AEC6CF;
-      border: 2px solid #ff4f8b;
-      box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
-    }
-
-    .ya {
-      background-color: #FFFF00;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
-    }
+    .an { background-color: #ff6fa0; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);}
+    .hom { background-color: #AEC6CF; border: 2px solid #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);}
+    .ya { background-color: #FFFF00; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);}
 
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -104,11 +81,7 @@
       100% { transform: scale(1); }
     }
 
-    .title {
-      text-align: center;
-      margin-top: 160px;
-    }
-
+    .title { text-align: center; margin-top: 160px; }
     .colorful-title span {
       font-size: 60px;
       font-family: 'Rockwell Extra Bold', serif;
@@ -156,11 +129,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
+      margin-top: 80px; /* separa del header */
       flex-wrap: wrap;
       position: relative;
-      overflow: hidden;
-      gap: 40px; /* separa el logo de las imágenes laterales */
+      overflow: visible;
+      gap: 40px;
     }
 
     .logo3 {
@@ -172,78 +145,55 @@
       z-index: 2;
     }
 
-    /* ==== Ajuste principal ==== */
+    /* ==== LATERALES COMPLETAS ==== */
     .xd, .dx {
       position: absolute;
-      top: 50%;
+      top: 60%; /* más abajo para no tocar header */
       transform: translateY(-50%);
-      width: 400px; /* tamaño completo */
+      width: 400px;
       height: auto;
+      object-fit: contain; /* se ve completa */
       z-index: 1;
     }
 
-    /* Más hacia los bordes */
-    .xd {
-      left: -160px; /* más alejado del logo */
-      object-position: left;
-    }
+    .xd { left: -240px; } /* más separadas del centro */
+    .dx { right: -240px; }
 
-    .dx {
-      right: -160px; /* más alejado del logo */
-      object-position: right;
-    }
-
-    /* Imagen central (texto de CIENCIA DE COLORES) más pequeña */
     .k {
-      width: 500px; /* antes era 700px, ahora más proporcionado */
+      width: 500px;
       max-width: 80%;
       z-index: 2;
     }
 
-    /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      header {
-        flex-wrap: wrap;
-      }
-
+      html, body { height: 100%; margin: 0; padding: 0; }
+      header { flex-wrap: wrap; }
       .hero {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-        min-height: 100vh;
         gap: 15px;
+        margin-top: 40px;
       }
 
       .xd, .dx {
-        position: relative;
+        position: relative; /* deja de ser absoluta en celular */
         transform: none;
         width: 300px;
         height: auto;
         margin: 10px auto;
-        opacity: 0.9;
+        object-fit: contain;
       }
 
-      .xd {
-        order: -1;
-      }
+      .xd { order: -1; }
+      .dx { order: 1; }
 
-      .dx {
-        order: 1;
-      }
+      .k { width: 80%; max-width: 450px; margin-top: 10px; }
+    }
 
-      .k {
-        width: 80%;
-        max-width: 450px;
-        z-index: 2;
-        margin-top: 10px;
-      }
+    @media (min-width: 1400px) {
+      .xd { left: -280px; }
+      .dx { right: -280px; }
     }
   </style>
 </head>
