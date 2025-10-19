@@ -90,36 +90,50 @@
 
     /* -------- HERO -------- */
     .hero {
-      position: relative; /* importante para las imágenes laterales */
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 30px;
-      gap: 20px;
-      flex-wrap: nowrap;
       text-align: center;
+      overflow: visible;
     }
 
-    .xd, .dx {
-      position: absolute; /* se asoman desde los laterales */
-      top: 50%; /* centrar verticalmente */
+    /* contenedores para cortar la mitad de las imágenes */
+    .xd-container, .dx-container {
+      position: absolute;
+      top: 50%;
       transform: translateY(-50%);
-      width: 250px;
+      width: 50%; /* mostrar solo la mitad de la imagen */
+      overflow: hidden;
       height: auto;
       z-index: 1;
     }
 
+    .xd-container {
+      left: 0;
+    }
+
+    .dx-container {
+      right: 0;
+    }
+
+    .xd, .dx {
+      width: 200%; /* el doble para que se vea solo la mitad */
+      height: auto;
+    }
+
     .xd {
-      left: -50px; /* asoma desde la izquierda */
+      transform: translateX(-50%); /* mover la imagen hacia afuera para mostrar solo la mitad */
     }
 
     .dx {
-      right: -50px; /* asoma desde la derecha */
+      transform: translateX(50%); /* mover la imagen hacia afuera para mostrar solo la mitad */
     }
 
     /* contenedor central (logo + texto) */
     .hero-center {
-      position: relative; /* estar encima de imágenes laterales */
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -196,10 +210,20 @@
         padding: 15px 10px;
       }
 
+      .xd-container, .dx-container {
+        width: 40%; /* mostrar menos en celular */
+      }
+
       .xd, .dx {
-        width: 150px; /* más pequeño en celular */
-        left: -30px;
-        right: -30px;
+        width: 250%; /* ajustar para que solo se vea la mitad */
+      }
+
+      .xd {
+        transform: translateX(-60%);
+      }
+
+      .dx {
+        transform: translateX(60%);
       }
 
       .hero-center {
@@ -241,14 +265,18 @@
   </header>
 
   <div class="hero">
-    <img class="xd" src="human_cráneo-removebg-preview.png" alt="cráneo izquierdo">
+    <div class="xd-container">
+      <img class="xd" src="human_cráneo-removebg-preview.png" alt="cráneo izquierdo">
+    </div>
 
     <div class="hero-center">
       <img src="logo.png" alt="logo principal" class="logo3">
       <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png" alt="ciencia de colores">
     </div>
 
-    <img class="dx" src="human_cráneo-removebg-preview.png" alt="cráneo derecho">
+    <div class="dx-container">
+      <img class="dx" src="human_cráneo-removebg-preview.png" alt="cráneo derecho">
+    </div>
   </div>
 
   <div class="subtitle-container">
