@@ -11,11 +11,6 @@
       font-weight: bold;
     }
 
-    @media (max-width:991px){
-      body{ padding:20px; }
-      form{ width:340px; }
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -26,21 +21,16 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
-    }
-
-    body, .an, .hom, .ya, header {
       font-family: 'Comico', sans-serif;
     }
 
-    h1, h2, h3, text, p, .an, .hom, .ya, .nas {
+    h1, h2, h3, p, .an, .hom, .ya {
       font-weight: 400;
       background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
     }
 
     header {
@@ -81,16 +71,6 @@
       100% { transform: scale(1); }
     }
 
-    .title { text-align: center; margin-top: 160px; }
-    .colorful-title span {
-      font-size: 60px;
-      font-family: 'Rockwell Extra Bold', serif;
-      font-weight: bold;
-      display: inline-block;
-      margin: 0 1px;
-      -webkit-text-stroke: 1.5px #555;
-    }
-
     .subtitle-container {
       display: flex;
       justify-content: center;
@@ -129,7 +109,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 80px; /* separa del header */
+      margin-top: 100px; /* bajamos las imágenes para no chocar con header */
       flex-wrap: wrap;
       position: relative;
       overflow: visible;
@@ -145,10 +125,10 @@
       z-index: 2;
     }
 
-    /* ==== LATERALES COMPLETAS ==== */
+    /* ==== Imágenes laterales completas y con ilusión ==== */
     .xd, .dx {
       position: absolute;
-      top: 60%; /* más abajo para no tocar header */
+      top: 65%; /* más abajo para no tocar header */
       transform: translateY(-50%);
       width: 400px;
       height: auto;
@@ -156,8 +136,8 @@
       z-index: 1;
     }
 
-    .xd { left: -240px; } /* más separadas del centro */
-    .dx { right: -240px; }
+    .xd { left: -260px; } /* más separadas del centro */
+    .dx { right: -260px; }
 
     .k {
       width: 500px;
@@ -165,19 +145,18 @@
       z-index: 2;
     }
 
+    /* ==== Responsivo ==== */
     @media (max-width: 991px) {
-      html, body { height: 100%; margin: 0; padding: 0; }
-      header { flex-wrap: wrap; }
       .hero {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 15px;
-        margin-top: 40px;
+        margin-top: 50px;
       }
 
       .xd, .dx {
-        position: relative; /* deja de ser absoluta en celular */
+        position: relative; /* deja de ser absoluta */
         transform: none;
         width: 300px;
         height: auto;
@@ -192,8 +171,8 @@
     }
 
     @media (min-width: 1400px) {
-      .xd { left: -280px; }
-      .dx { right: -280px; }
+      .xd { left: -300px; }
+      .dx { right: -300px; }
     }
   </style>
 </head>
