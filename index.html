@@ -1,204 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
-<title>Explorando la Anatomía Humana</title>
-<style>
-@font-face {
-  src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
-  font-weight: bold;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
+  <title>Explorando la Anatomía Humana</title>
+  <style>
+    @font-face {
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: bold;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
-  color: #444;
-  overflow-x: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  font-family: 'Comico', sans-serif;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
+      color: #444;
+      overflow-x: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      font-family: 'Comico', sans-serif;
+    }
 
-h1, h2, h3, p, .an, .hom, .ya {
-  font-weight: 400;
-  background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
+    h1, h2, h3, p {
+      font-weight: 400;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 10;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
-.an, .hom, .ya {
-  font-size: 25px;
-  border-radius: 25px;
-  padding: 25px 8px;
-  cursor: pointer;
-  animation: pulse 2s infinite;
-}
+    .menu {
+      display: flex;
+      gap: 15px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
 
-.an { background-color: #ff6fa0; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173,216,230,0.5);}
-.hom { background-color: #AEC6CF; border: 2px solid #ff4f8b; box-shadow: 0 20px 20px rgba(255,111,160,0.5);}
-.ya { background-color: #FFFF00; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173,216,230,0.5);}
+    .an, .hom, .ya {
+      font-size: 25px;
+      border-radius: 25px;
+      padding: 25px 8px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+      font-family: 'Comico', sans-serif;
+    }
 
-@keyframes pulse {
-  0% { transform: scale(1);}
-  50% { transform: scale(1.05);}
-  100% { transform: scale(1);}
-}
+    .an {
+      background-color: #ff6fa0;
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+    }
 
-.subtitle-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  max-width: 900px;
-  margin: 40px auto -30px auto;
-  flex-wrap: wrap;
-}
+    .hom {
+      background-color: #AEC6CF;
+      border: 2px solid #ff4f8b;
+      box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
+    }
 
-.subtitle-block {
-  max-width: 400px;
-  flex: 1;
-  background-color: #FFF275;
-  border-radius: 25px;
-  border: 10px solid transparent;
-  padding: 10px 20px;
-  text-align: center;
-  color: #444;
-}
+    .ya {
+      background-color: #FFFF00;
+      border: 2px solid #AEC6CF;
+      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+    }
 
-.subtitle-block h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 22px;
-  color: #333;
-}
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
 
-.subtitle-block p {
-  font-size: 18px;
-  margin: 0;
-  color: #666;
-}
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: visible; /* permite que se vean completas */
+      gap: 60px; /* más espacio entre logo y bordes */
+    }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-  flex-wrap: wrap;
-  position: relative;
-  overflow: visible;
-  gap: 40px;
-}
+    .logo3 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      z-index: 2;
+    }
 
-.logo3 {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 4px solid white;
-  object-fit: cover;
-  z-index: 2;
-}
+    /* ==== LATERALES AJUSTADOS ==== */
+    .xd, .dx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 380px; /* mantiene tamaño similar */
+      height: auto;
+      object-fit: contain; /* muestra imagen completa */
+      z-index: 1;
+      opacity: 0.95;
+    }
 
-/* ==== Imágenes laterales con ilusión ==== */
-.xd, .dx {
-  position: absolute;
-  top: 65%;
-  transform: translateY(-50%);
-  width: 400px;
-  height: auto;
-  object-fit: cover;
-  z-index: 1;
-}
+    .xd {
+      left: -180px; /* un poco más afuera */
+    }
 
-.xd { left: -220px; }
-.dx { right: -180px; }
+    .dx {
+      right: -180px; /* un poco más afuera */
+    }
 
-/* Texto central más grande */
-.k { width: 580px; max-width: 85%; z-index: 2; }
+    /* Texto central más pequeño */
+    .k {
+      width: 500px;
+      max-width: 80%;
+      z-index: 2;
+    }
 
-/* ==== Responsivo ==== */
-@media (max-width: 991px) {
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 50px;
-  }
+    .subtitle-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      flex-wrap: wrap;
+    }
 
-  .xd, .dx {
-    position: absolute;
-    width: 35vw; /* proporcional al ancho de pantalla */
-    height: auto;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+    .subtitle-block {
+      max-width: 400px;
+      flex: 1;
+      background-color: #FFF275;
+      border-radius: 25px;
+      border: 10px solid transparent;
+      padding: 10px 20px;
+      text-align: center;
+      color: #444;
+    }
 
-  .xd { left: -15vw; } /* lateral izquierdo parcialmente fuera */
-  .dx { right: -15vw; } /* lateral derecho parcialmente fuera */
+    .subtitle-block h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
 
-  .k { width: 80%; max-width: 450px; margin-top: 10px; }
-}
+    .subtitle-block p {
+      font-size: 18px;
+    }
 
-@media (min-width: 1400px) {
-  .xd { left: -260px; }
-  .dx { right: -220px; }
-}
-</style>
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 991px) {
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .xd, .dx {
+        position: relative;
+        transform: none;
+        width: 300px;
+        margin: 10px auto;
+        opacity: 0.9;
+      }
+
+      .xd {
+        order: -1;
+      }
+
+      .dx {
+        order: 1;
+      }
+
+      .k {
+        width: 80%;
+        max-width: 450px;
+      }
+    }
+
+    /* ==== Pantallas grandes (efecto más cinematográfico) ==== */
+    @media (min-width: 1400px) {
+      .xd {
+        left: -220px;
+      }
+
+      .dx {
+        right: -220px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<img src="images.jpg" alt="Logo Izquierdo" class="logo">
-<a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
-<a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
-<a href="videos.html"><button class="an">VIDEOS</button></a>
-<a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
-<img src="anatomia.jpg" alt="Logo Derecho" class="logo">
-</header>
+  <header>
+    <img src="images.jpg" alt="Logo Izquierdo" class="logo">
+    <a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
+    <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
+    <a href="videos.html"><button class="an">VIDEOS</button></a>
+    <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
+    <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
+  </header>
 
-<div class="hero">
-<img src="logo.png" alt="logo principal" class="logo3">
-<div class="title colorful-title"></div>
-<img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
-<img class="xd" src="human_cráneo-removebg-preview.png">
-<img class="dx" src="human_cráneo-removebg-preview.png">
-</div>
+  <div class="hero">
+    <img src="logo.png" alt="logo principal" class="logo3">
+    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
+    <img class="xd" src="human_cráneo-removebg-preview.png">
+    <img class="dx" src="human_cráneo-removebg-preview.png">
+  </div>
 
-<div class="subtitle-container">
-<div class="subtitle-block">
-<h3>MISIÓN</h3>
-<p>Educar a sus estudiantes con fe, humildad, sencillez y valores para formar personas comprometidas con la sociedad.</p>
-</div>
-<div class="subtitle-block">
-<h3>VISIÓN</h3>
-<p>Ser una comunidad reconocida por su formación en valores cristianos, donde la humildad y la sencillez sean ejemplo de vida.</p>
-</div>
-</div>
+  <div class="subtitle-container">
+    <div class="subtitle-block">
+      <h3>MISIÓN</h3>
+      <p>Educar a sus estudiantes con fe, humildad, sencillez y valores para formar personas comprometidas con la sociedad.</p>
+    </div>
+    <div class="subtitle-block">
+      <h3>VISIÓN</h3>
+      <p>Ser una comunidad reconocida por su formación en valores cristianos, donde la humildad y la sencillez sean ejemplo de vida.</p>
+    </div>
+  </div>
 </body>
 </html>
