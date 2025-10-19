@@ -11,11 +11,6 @@
       font-weight: bold;
     }
 
-    @media (max-width:991px){
-      body{ padding:20px; }
-      form{ width:340px; }
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -26,21 +21,16 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
-    }
-
-    body, .an, .hom, .ya, header {
       font-family: 'Comico', sans-serif;
     }
 
-    h1, h2, h3, text, p, .an, .hom, .ya, .nas {
+    h1, h2, h3, p, text {
       font-weight: 400;
       background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
     }
 
     header {
@@ -59,69 +49,81 @@
       height: 100px;
       object-fit: cover;
       border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    .menu {
+    .hero {
       display: flex;
-      gap: 15px;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 10px 30px;
-      border-radius: 50px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(10px);
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: visible;
+      gap: 40px;
     }
 
-    .an, .hom, .ya {
-      font-size: 25px;
-      border-radius: 25px;
-      padding: 25px 8px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
+    .logo3 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      z-index: 2;
     }
 
-    .an {
-      background-color: #ff6fa0;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
+    /* Imagen central completa */
+    .k {
+      width: 500px;
+      max-width: 80%;
+      height: auto;
+      object-fit: contain;
+      z-index: 2;
     }
 
-    .hom {
-      background-color: #AEC6CF;
-      border: 2px solid #ff4f8b;
-      box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);
+    /* Imágenes laterales completas */
+    .xd, .dx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      max-width: 35vw;   /* ancho máximo proporcional */
+      height: 70vh;      /* altura proporcional para mostrar completa */
+      object-fit: contain; /* mantiene la imagen completa */
+      z-index: 1;
     }
 
-    .ya {
-      background-color: #FFFF00;
-      border: 2px solid #AEC6CF;
-      box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);
-    }
+    .xd { left: -15vw; }
+    .dx { right: -15vw; }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+    /* Ajuste responsivo */
+    @media (max-width: 991px) {
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .title {
-      text-align: center;
-      margin-top: 160px;
-    }
+      .xd, .dx {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        max-width: 50vw;
+        height: 50vh;
+      }
 
-    .colorful-title span {
-      font-size: 60px;
-      font-family: 'Rockwell Extra Bold', serif;
-      font-weight: bold;
-      display: inline-block;
-      margin: 0 1px;
-      -webkit-text-stroke: 1.5px #555;
+      .xd { left: -10vw; }
+      .dx { right: -10vw; }
+
+      .k {
+        width: 80%;
+        max-width: 450px;
+      }
     }
 
     .subtitle-container {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       gap: 40px;
       max-width: 900px;
       margin: 40px auto -30px auto;
@@ -139,104 +141,9 @@
       color: #444;
     }
 
-    .subtitle-block h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 22px;
-      color: #333;
-    }
+    .subtitle-block h3 { margin-top:0; margin-bottom:10px; font-size:22px; color:#333; }
+    .subtitle-block p { font-size:18px; margin:0; color:#666; }
 
-    .subtitle-block p {
-      font-size: 18px;
-      margin: 0;
-      color: #666;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      flex-wrap: wrap;
-      position: relative;
-      overflow: hidden;
-      gap: 40px;
-    }
-
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      z-index: 2;
-    }
-
-    /* ==== Imagen central completa ==== */
-    .k {
-      width: 500px;
-      max-width: 80%;
-      height: auto;
-      object-fit: contain; /* muestra toda la imagen sin recortar */
-      z-index: 2;
-    }
-
-    /* ==== Ajuste principal de imágenes laterales ==== */
-    .xd, .dx {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30vw;
-      max-width: 450px;
-      height: auto;
-      object-fit: contain;
-      z-index: 1;
-    }
-
-    .xd { left: -20vw; }
-    .dx { right: -20vw; }
-
-    /* ==== Ajuste responsivo ==== */
-    @media (max-width: 991px) {
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      header {
-        flex-wrap: wrap;
-      }
-
-      .hero {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        min-height: 100vh;
-        gap: 15px;
-      }
-
-      /* Mantener imágenes laterales visibles y asomadas en móvil */
-      .xd, .dx {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50vw;
-        max-width: 300px;
-        z-index: 1;
-      }
-
-      .xd { left: -15vw; }
-      .dx { right: -15vw; }
-
-      .k {
-        width: 80%;
-        max-width: 450px;
-        z-index: 2;
-        margin-top: 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -251,7 +158,6 @@
 
   <div class="hero">
     <img src="logo.png" alt="logo principal" class="logo3">
-    <div class="title colorful-title"></div>
     <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
     <img class="xd" src="human_cráneo-removebg-preview.png">
     <img class="dx" src="human_cráneo-removebg-preview.png">
