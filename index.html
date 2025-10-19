@@ -109,7 +109,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 100px; /* bajadas del header */
+      margin-top: 100px;
       flex-wrap: wrap;
       position: relative;
       overflow: visible;
@@ -125,10 +125,10 @@
       z-index: 2;
     }
 
-    /* ==== Imágenes laterales completas y centradas más cerca del logo ==== */
+    /* ==== Imágenes laterales completas y más separadas del centro ==== */
     .xd, .dx {
       position: absolute;
-      top: 65%; /* más abajo para no tocar header */
+      top: 65%;
       transform: translateY(-50%);
       width: 400px;
       height: auto;
@@ -136,8 +136,8 @@
       z-index: 1;
     }
 
-    .xd { left: -120px; } /* más cerca del centro */
-    .dx { right: -120px; }
+    .xd { left: -220px; } /* más hacia el lateral izquierdo */
+    .dx { right: -220px; } /* más hacia el lateral derecho */
 
     .k {
       width: 500px;
@@ -171,8 +171,8 @@
     }
 
     @media (min-width: 1400px) {
-      .xd { left: -150px; }
-      .dx { right: -150px; }
+      .xd { left: -260px; }
+      .dx { right: -260px; }
     }
   </style>
 </head>
