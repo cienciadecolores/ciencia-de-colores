@@ -102,19 +102,19 @@
 
     /* Imágenes laterales */
     .xd, .dx {
-      width: 450px; /* tamaño más grande */
+      width: 450px; /* tamaño grande */
       height: auto;
       position: absolute;
-      top: 85%; /* más abajo */
+      top: 95%; /* más abajo */
       transform: translateY(-50%);
     }
 
     .xd {
-      left: -225px; /* ajustado según nuevo tamaño */
+      left: -225px; /* ajustado al tamaño */
     }
 
     .dx {
-      right: -225px; /* ajustado según nuevo tamaño */
+      right: -225px; /* ajustado al tamaño */
     }
 
     /* contenedor central (logo + texto) */
@@ -124,7 +124,7 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      z-index: 1; /* Asegura que quede encima de las imágenes laterales */
+      z-index: 1; /* encima de las imágenes laterales */
     }
 
     .logo3 {
@@ -200,9 +200,9 @@
       }
 
       .xd, .dx {
-        width: 250px; /* tamaño móvil se mantiene */
+        width: 250px; /* tamaño móvil */
         position: relative;
-        top: 0;
+        top: 0; /* centrado en móvil */
         left: 0;
         right: 0;
         transform: none;
