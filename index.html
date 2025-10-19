@@ -160,7 +160,7 @@
       flex-wrap: wrap;
       position: relative;
       overflow: hidden;
-      gap: 40px; /* separa el logo de las imágenes laterales */
+      gap: 40px;
     }
 
     .logo3 {
@@ -172,9 +172,12 @@
       z-index: 2;
     }
 
+    /* ==== Imagen central completa ==== */
     .k {
-      width: 500px; /* antes era 700px, ahora más proporcionado */
+      width: 500px;
       max-width: 80%;
+      height: auto;
+      object-fit: contain; /* muestra toda la imagen sin recortar */
       z-index: 2;
     }
 
@@ -183,15 +186,15 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 25vw;        /* ancho proporcional a la pantalla */
-      max-width: 400px;   /* tamaño máximo */
+      width: 30vw;        /* ancho proporcional */
+      max-width: 450px;
       height: auto;
       object-fit: contain; /* mostrar imagen completa */
       z-index: 1;
     }
 
-    .xd { left: -10vw; }   /* asomándose desde el borde izquierdo */
-    .dx { right: -10vw; }  /* asomándose desde el borde derecho */
+    .xd { left: -20vw; }   /* más asomada desde el borde izquierdo */
+    .dx { right: -20vw; }  /* más asomada desde el borde derecho */
 
     /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
@@ -217,8 +220,8 @@
       .xd, .dx {
         position: relative;
         transform: none;
-        width: 60vw;       /* ancho proporcional en móvil */
-        max-width: 300px;
+        width: 70vw;       /* más grande proporcional en móvil */
+        max-width: 320px;
         margin: 10px auto;
         display: block;
       }
