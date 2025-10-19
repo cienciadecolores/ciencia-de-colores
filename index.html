@@ -6,166 +6,147 @@
   <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
   <title>Explorando la Anatomía Humana</title>
   <style>
+    /* --- Reset y base --- */
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      font-family: 'Comico', sans-serif;
+      color: #444;
       background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 100vh;
-      color: #444;
       overflow-x: hidden;
-      font-family: 'Comico', sans-serif;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px 30px;
+      background-color: rgba(255,255,255,0.75);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
+    .logo { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; }
+    .an, .hom, .ya { font-size: 18px; padding: 12px 16px; border-radius: 20px; cursor: pointer; }
+    .an { background:#ff6fa0; border:2px solid #AEC6CF; }
+    .hom { background:#AEC6CF; border:2px solid #ff4f8b; }
+    .ya  { background:#FFFF00; border:2px solid #AEC6CF; }
 
-    .an, .hom, .ya {
-      font-family: 'Comico', sans-serif;
-      font-weight: 400;
-      font-size: 25px;
-      border-radius: 25px;
-      padding: 25px 8px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-
-    .an { background-color: #ff6fa0; border: 2px solid #AEC6CF; }
-    .hom { background-color: #AEC6CF; border: 2px solid #ff4f8b; }
-    .ya { background-color: #FFFF00; border: 2px solid #AEC6CF; }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-
+    /* --- HERO --- */
     .hero {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
-      position: relative;
-      flex-wrap: wrap;
-      overflow: hidden;
+      min-height: calc(100vh - 160px); /* dejar espacio para header y subtítulos */
+      overflow: visible; /* importante para que las imágenes partidas se muestren fuera */
     }
 
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      z-index: 2;
-    }
-
-    /* ===== NUEVA FORMA CORRECTA PARA LAS DOS IMÁGENES ===== */
+    /* Imágenes laterales: saliendo parcialmente del viewport */
     .xd, .dx {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 400px;
+      width: 55vw;             /* ocupan gran parte del alto/anchura según viewport */
+      max-width: 900px;        /* límite razonable en pantallas grandes */
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
       z-index: 1;
+      /* Suaviza bordes en móviles/antiguos navegadores */
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
+    /* Mostrar sólo la mitad vertical de cada imagen para la ilusión "partida" */
     .xd {
       left: 0;
-      transform: translate(-50%, -50%); /* mitad fuera del borde izquierdo */
+      /* recortamos la mitad derecha del archivo para mostrar la parte que queda dentro del viewport */
+      clip-path: inset(0 50% 0 0); /* top right bottom left */
+      transform: translate(-30%, -50%); /* sale hacia la izquierda (más fuera de pantalla) */
     }
 
     .dx {
       right: 0;
-      transform: translate(50%, -50%); /* mitad fuera del borde derecho */
+      /* recortamos la mitad izquierda para que la parte visible quede dentro del viewport */
+      clip-path: inset(0 0 0 50%);
+      transform: translate(30%, -50%); /* sale hacia la derecha */
     }
 
-    /* ===== SUBTÍTULOS ===== */
+    /* Imagen central (CIENCIA-DE-COLORES) */
+    .k {
+      position: relative;
+      z-index: 3;              /* por encima de las piezas laterales */
+      width: 520px;
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    }
+
+    /* Subtítulos / tarjetas inferiores */
     .subtitle-container {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      max-width: 900px;
-      margin: 40px auto;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 28px auto 60px auto;
+      padding: 0 16px;
       flex-wrap: wrap;
     }
 
     .subtitle-block {
-      max-width: 400px;
-      flex: 1;
       background-color: #FFF275;
-      border-radius: 25px;
-      padding: 10px 20px;
-      text-align: center;
-      color: #444;
+      border-radius: 20px;
+      padding: 18px 22px;
+      flex: 1 1 320px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
 
-    .subtitle-block h3 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #333;
-    }
+    .subtitle-block h3 { margin: 0 0 8px; font-size: 20px; }
+    .subtitle-block p  { margin: 0; font-size: 16px; color:#444; }
 
-    .subtitle-block p {
-      font-size: 18px;
-      margin: 0;
-      color: #666;
-    }
-
-    /* ===== RESPONSIVE ===== */
+    /* --- RESPONSIVE (móvil) --- */
     @media (max-width: 991px) {
-      header {
-        justify-content: center;
-      }
+      header { padding: 12px; gap: 8px; }
+      .logo { width: 72px; height:72px; }
 
-      .hero {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-
-      /* En móvil, las imágenes se alinean arriba y abajo limpias */
+      /* En móvil: quitar el recorte extremo y apilar imágenes ordenadamente */
       .xd, .dx {
         position: relative;
-        transform: none;
         width: 80%;
-        max-width: 300px;
+        max-width: 360px;
+        transform: none;
+        clip-path: none;   /* mostrar imagen completa en móvil */
         margin: 10px auto;
         display: block;
+        z-index: 1;
       }
 
-      .xd {
-        order: -1; /* aparece antes del logo */
+      .xd { order: -1; } /* aparece antes del logo central si quieres */
+      .dx { order: 1; }
+
+      .k {
+        width: 88%;
+        max-width: 360px;
+        margin: 6px auto;
       }
 
-      .dx {
-        order: 1; /* aparece después del logo */
-      }
+      .hero { padding-top: 24px; min-height: auto; }
+    }
 
-      .logo3 {
-        width: 200px;
-        height: 200px;
-        margin: 20px 0;
-      }
+    /* soporte para navegadores antiguos: si clip-path no existe, confiar en overflow oculto */
+    @supports not (clip-path: inset(0 50% 0 0)) {
+      .xd, .dx { overflow: hidden; }
+      .xd img, .dx img { display:block; width:100%; }
     }
   </style>
 </head>
@@ -180,8 +161,13 @@
   </header>
 
   <div class="hero">
+    <!-- Lado izquierdo (mostrará sólo la mitad derecha del archivo gracias a clip-path) -->
     <img class="xd" src="human_cráneo-removebg-preview.png" alt="lado izquierdo">
-    <img src="logo.png" alt="logo principal" class="logo3">
+
+    <!-- Imagen central recuperada -->
+    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png" alt="Ciencia de Colores">
+
+    <!-- Lado derecho (mostrará sólo la mitad izquierda del archivo gracias a clip-path) -->
     <img class="dx" src="human_cráneo-removebg-preview.png" alt="lado derecho">
   </div>
 
