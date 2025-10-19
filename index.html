@@ -11,6 +11,11 @@
       font-weight: bold;
     }
 
+    @media (max-width:991px){
+      body{ padding:20px; }
+      form{ width:340px; }
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -21,6 +26,9 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
+    }
+
+    body, .an, .hom, .ya, header {
       font-family: 'Comico', sans-serif;
     }
 
@@ -74,7 +82,6 @@
       z-index: 2;
     }
 
-    /* Imagen central completa */
     .k {
       width: 500px;
       max-width: 80%;
@@ -83,10 +90,10 @@
       z-index: 2;
     }
 
-    /* Imágenes laterales completas */
+    /* Solo bajamos las imágenes laterales */
     .xd, .dx {
       position: absolute;
-      top: 60%; /* bajadas para no tocar header */
+      top: 65%; /* antes 50%, ahora bajadas */
       transform: translateY(-50%);
       width: auto;
       max-width: 35vw;
@@ -106,7 +113,7 @@
       }
 
       .xd, .dx {
-        top: 65%; /* bajadas en móvil */
+        top: 70%; /* bajadas en móvil */
         transform: translateY(-50%);
         width: auto;
         max-width: 50vw;
@@ -122,58 +129,4 @@
       }
     }
 
-    .subtitle-container {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      max-width: 900px;
-      margin: 40px auto -30px auto;
-      flex-wrap: wrap;
-    }
-
-    .subtitle-block {
-      max-width: 400px;
-      flex: 1;
-      background-color: #FFF275;
-      border-radius: 25px;
-      border: 10px solid transparent;
-      padding: 10px 20px;
-      text-align: center;
-      color: #444;
-    }
-
-    .subtitle-block h3 { margin-top:0; margin-bottom:10px; font-size:22px; color:#333; }
-    .subtitle-block p { font-size:18px; margin:0; color:#666; }
-
-  </style>
-</head>
-<body>
-  <header>
-    <img src="images.jpg" alt="Logo Izquierdo" class="logo">
-    <a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
-    <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
-    <a href="videos.html"><button class="an">VIDEOS</button></a>
-    <a href="sugeren.html"><button class="ya">SUGERENCIA</button></a>
-    <img src="anatomia.jpg" alt="Logo Derecho" class="logo">
-  </header>
-
-  <div class="hero">
-    <img src="logo.png" alt="logo principal" class="logo3">
-    <div class="title colorful-title"></div>
-    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png">
-    <img class="xd" src="human_cráneo-removebg-preview.png">
-    <img class="dx" src="human_cráneo-removebg-preview.png">
-  </div>
-
-  <div class="subtitle-container">
-    <div class="subtitle-block">
-      <h3>MISIÓN</h3>
-      <p>Educar a sus estudiantes con fe, humildad, sencillez y valores para formar personas comprometidas con la sociedad.</p>
-    </div>
-    <div class="subtitle-block">
-      <h3>VISIÓN</h3>
-      <p>Ser una comunidad reconocida por su formación en valores cristianos, donde la humildad y la sencillez sean ejemplo de vida.</p>
-    </div>
-  </div>
-</body>
-</html>
+    .subt
