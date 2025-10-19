@@ -90,6 +90,7 @@
 
     /* -------- HERO -------- */
     .hero {
+      position: relative; /* importante para las imágenes laterales */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,18 +101,31 @@
     }
 
     .xd, .dx {
-      width: 280px;
+      position: absolute; /* se asoman desde los laterales */
+      top: 50%; /* centrar verticalmente */
+      transform: translateY(-50%);
+      width: 250px;
       height: auto;
-      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .xd {
+      left: -50px; /* asoma desde la izquierda */
+    }
+
+    .dx {
+      right: -50px; /* asoma desde la derecha */
     }
 
     /* contenedor central (logo + texto) */
     .hero-center {
+      position: relative; /* estar encima de imágenes laterales */
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      z-index: 2;
     }
 
     .logo3 {
@@ -182,16 +196,12 @@
         padding: 15px 10px;
       }
 
-      .hero {
-        flex-direction: column;
-      }
-
       .xd, .dx {
-        width: 200px;
-        margin: 10px auto;
+        width: 150px; /* más pequeño en celular */
+        left: -30px;
+        right: -30px;
       }
 
-      /* logo y texto en columna en celular */
       .hero-center {
         flex-direction: column;
         gap: 10px;
