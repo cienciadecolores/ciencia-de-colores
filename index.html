@@ -125,25 +125,22 @@ header {
   z-index: 2;
 }
 
-/* ==== Imágenes laterales completas, responsivas y con ilusión ==== */
+/* ==== Imágenes laterales con ilusión ==== */
 .xd, .dx {
   position: absolute;
   top: 65%;
   transform: translateY(-50%);
   width: 400px;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   z-index: 1;
 }
 
-.xd { left: -220px; } /* lateral izquierdo */
-.dx { right: -200px; } /* lateral derecho más centrado que antes */
+.xd { left: -220px; }
+.dx { right: -180px; }
 
-.k {
-  width: 580px;
-  max-width: 85%;
-  z-index: 2;
-}
+/* Texto central más grande */
+.k { width: 580px; max-width: 85%; z-index: 2; }
 
 /* ==== Responsivo ==== */
 @media (max-width: 991px) {
@@ -151,21 +148,20 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin-top: 50px;
   }
 
   .xd, .dx {
-    position: relative;
-    transform: none;
-    width: 300px;
+    position: absolute;
+    width: 35vw; /* proporcional al ancho de pantalla */
     height: auto;
-    margin: 10px auto;
-    object-fit: contain;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
-  .xd { order: -1; }
-  .dx { order: 1; }
+  .xd { left: -15vw; } /* lateral izquierdo parcialmente fuera */
+  .dx { right: -15vw; } /* lateral derecho parcialmente fuera */
 
   .k { width: 80%; max-width: 450px; margin-top: 10px; }
 }
