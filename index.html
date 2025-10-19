@@ -24,90 +24,57 @@
       font-family: 'Comico', sans-serif;
     }
 
-    h1, h2, h3, text, p, .an, .hom, .ya, .nas {
+    h1, h2, h3, p, .an, .hom, .ya {
       font-weight: 400;
       background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
     }
 
-    .hero {
+    header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      flex-wrap: wrap;
+      padding: 20px 40px;
       position: relative;
-      overflow: visible;
-      gap: 40px;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 10;
     }
 
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: 4px solid white;
+    .logo {
+      width: 100px;
+      height: 100px;
       object-fit: cover;
-      z-index: 2;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-    /* ==== Imagen central completa ==== */
-    .k {
-      width: 500px;
-      max-width: 80%;
-      height: auto;
-      object-fit: contain;
-      z-index: 2;
+    .an, .hom, .ya {
+      font-size: 25px;
+      border-radius: 25px;
+      padding: 25px 8px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
     }
 
-    /* ==== Imágenes laterales completas ==== */
-    .xd, .dx {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: auto;
-      max-width: 35vw;
-      height: 70vh;
-      object-fit: contain;
-      z-index: 1;
-    }
+    .an { background-color: #ff6fa0; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);}
+    .hom { background-color: #AEC6CF; border: 2px solid #ff4f8b; box-shadow: 0 20px 20px rgba(255, 111, 160, 0.5);}
+    .ya { background-color: #FFFF00; border: 2px solid #AEC6CF; box-shadow: 0 20px 20px rgba(173, 216, 230, 0.5);}
 
-    .xd { left: -15vw; }
-    .dx { right: -15vw; }
-
-    /* ==== Ajuste responsivo ==== */
-    @media (max-width: 991px) {
-      .hero {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .xd, .dx {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        max-width: 50vw;
-        height: 50vh;
-      }
-
-      .xd { left: -10vw; }
-      .dx { right: -10vw; }
-
-      .k {
-        width: 80%;
-        max-width: 450px;
-      }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
     .subtitle-container {
       display: flex;
       justify-content: center;
+      align-items: flex-start;
       gap: 40px;
       max-width: 900px;
       margin: 40px auto -30px auto;
@@ -125,9 +92,89 @@
       color: #444;
     }
 
-    .subtitle-block h3 { margin-top:0; margin-bottom:10px; font-size:22px; color:#333; }
-    .subtitle-block p { font-size:18px; margin:0; color:#666; }
+    .subtitle-block h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #333;
+    }
 
+    .subtitle-block p {
+      font-size: 18px;
+      margin: 0;
+      color: #666;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: visible;
+      gap: 40px;
+    }
+
+    .logo3 {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      z-index: 2;
+    }
+
+    /* ==== Imágenes laterales completas y ajustadas ==== */
+    .xd, .dx {
+      position: absolute;
+      top: 65%;
+      transform: translateY(-50%);
+      width: 400px;
+      height: auto;
+      object-fit: contain;
+      z-index: 1;
+    }
+
+    .xd { left: -220px; } /* lateral izquierdo */
+    .dx { right: -180px; } /* lateral derecho más cerca del centro */
+
+    /* CIENCIA DE COLORES un poco más grande */
+    .k {
+      width: 580px;
+      max-width: 85%;
+      z-index: 2;
+    }
+
+    /* ==== Responsivo ==== */
+    @media (max-width: 991px) {
+      .hero {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 50px;
+      }
+
+      .xd, .dx {
+        position: relative;
+        transform: none;
+        width: 300px;
+        height: auto;
+        margin: 10px auto;
+        object-fit: contain;
+      }
+
+      .xd { order: -1; }
+      .dx { order: 1; }
+
+      .k { width: 80%; max-width: 450px; margin-top: 10px; }
+    }
+
+    @media (min-width: 1400px) {
+      .xd { left: -260px; }
+      .dx { right: -220px; }
+    }
   </style>
 </head>
 <body>
