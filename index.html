@@ -3,31 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tipografía Comico (Fontshare) -->
   <link href="https://api.fontshare.com/v2/css?f[]=comico@400&display=swap" rel="stylesheet">
   <title>Explorando la Anatomía Humana</title>
   <style>
+    /* intento de cargar Rockwell Extra Bold local (si el equipo tiene la fuente) */
+    @font-face {
+      src: local('Rockwell Extra Bold'), local('Rockwell-ExtraBold');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      font-family: 'Comico', sans-serif;
+      color: #444;
       background-image: url(https://image.freepik.com/vector-gratis/fondo-dibujos-animados-cielo-nubes-cielo-azul-cartel-nubes-blancas-o-volante-textura-fluida-patron-panorama-nubes_176411-732.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      height: 100vh;
-      color: #444;
       overflow-x: hidden;
-      font-family: 'Comico', sans-serif;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px 36px;
+      background-color: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .logo {
@@ -41,136 +52,154 @@
     .an, .hom, .ya {
       font-family: 'Comico', sans-serif;
       font-weight: 400;
-      font-size: 25px;
+      font-size: 20px;
       border-radius: 25px;
-      padding: 25px 8px;
+      padding: 14px 12px;
       cursor: pointer;
       animation: pulse 2s infinite;
+      background-clip: padding-box;
     }
 
     .an { background-color: #ff6fa0; border: 2px solid #AEC6CF; }
     .hom { background-color: #AEC6CF; border: 2px solid #ff4f8b; }
-    .ya { background-color: #FFFF00; border: 2px solid #AEC6CF; }
+    .ya  { background-color: #FFFF00; border: 2px solid #AEC6CF; }
 
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.03); }
       100% { transform: scale(1); }
     }
 
+    /* TITULO COLORIDO (restaurado estilo) */
+    .colorful-title {
+      text-align: center;
+      margin-top: 8px;
+      z-index: 4;
+    }
+    .colorful-title span {
+      font-family: 'Rockwell Extra Bold', serif; /* fallback a Rockwell local si existe */
+      font-weight: 700;
+      font-size: 56px;
+      display: inline-block;
+      margin: 0 2px;
+      -webkit-text-stroke: 1.5px #555;
+      background: linear-gradient(45deg, #ff0057, #ff9900, #ff00aa, #00ffee);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* HERO */
     .hero {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
-      position: relative;
-      flex-wrap: wrap;
-      overflow: hidden;
+      min-height: calc(100vh - 160px);
+      overflow: visible;
     }
 
-    .logo3 {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      object-fit: cover;
-      z-index: 2;
-    }
-
-    /* ===== NUEVA FORMA CORRECTA PARA LAS DOS IMÁGENES ===== */
+    /* piezas laterales (recorte suave con clip-path) */
     .xd, .dx {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 400px;
+      width: 55vw;
+      max-width: 900px;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
       z-index: 1;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
     }
 
     .xd {
       left: 0;
-      transform: translate(-50%, -50%); /* mitad fuera del borde izquierdo */
+      /* mostrar sólo la mitad derecha del archivo (dentro del viewport) */
+      clip-path: inset(0 50% 0 0);
+      transform: translate(-28%, -50%);
     }
 
     .dx {
       right: 0;
-      transform: translate(50%, -50%); /* mitad fuera del borde derecho */
+      /* mostrar sólo la mitad izquierda del archivo */
+      clip-path: inset(0 0 0 50%);
+      transform: translate(28%, -50%);
     }
 
-    /* ===== SUBTÍTULOS ===== */
+    /* imagen central CIENCIA DE COLORES (restaurada) */
+    .k {
+      position: relative;
+      z-index: 3; /* por encima de las piezas laterales */
+      width: 520px;
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.22));
+    }
+
+    /* Subtítulos */
     .subtitle-container {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      max-width: 900px;
-      margin: 40px auto;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 28px auto 60px auto;
+      padding: 0 16px;
       flex-wrap: wrap;
     }
-
     .subtitle-block {
-      max-width: 400px;
-      flex: 1;
       background-color: #FFF275;
-      border-radius: 25px;
-      padding: 10px 20px;
-      text-align: center;
-      color: #444;
+      border-radius: 20px;
+      padding: 18px 22px;
+      flex: 1 1 320px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      color: #222;
     }
+    .subtitle-block h3 { margin: 0 0 8px; font-size: 20px; }
+    .subtitle-block p  { margin: 0; font-size: 16px; color:#444; }
 
-    .subtitle-block h3 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #333;
-    }
-
-    .subtitle-block p {
-      font-size: 18px;
-      margin: 0;
-      color: #666;
-    }
-
-    /* ===== RESPONSIVE ===== */
+    /* RESPONSIVE */
     @media (max-width: 991px) {
-      header {
-        justify-content: center;
-      }
+      header { padding: 12px; justify-content: center; }
+      .logo { width: 72px; height: 72px; }
 
-      .hero {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-
-      /* En móvil, las imágenes se alinean arriba y abajo limpias */
+      /* en móvil: las piezas dejan de recortarse y se apilan */
       .xd, .dx {
         position: relative;
-        transform: none;
         width: 80%;
-        max-width: 300px;
+        max-width: 360px;
+        transform: none;
+        clip-path: none;
         margin: 10px auto;
         display: block;
+        z-index: 1;
+      }
+      .xd { order: -1; }
+      .dx { order: 1; }
+
+      .k {
+        width: 88%;
+        max-width: 360px;
+        margin: 6px auto;
       }
 
-      .xd {
-        order: -1; /* aparece antes del logo */
-      }
+      .hero { padding-top: 16px; min-height: auto; }
+      .colorful-title span { font-size: 36px; -webkit-text-stroke: 1px #444; }
+    }
 
-      .dx {
-        order: 1; /* aparece después del logo */
-      }
-
-      .logo3 {
-        width: 200px;
-        height: 200px;
-        margin: 20px 0;
-      }
+    /* Fallback si el navegador no soporta clip-path */
+    @supports not (clip-path: inset(0 50% 0 0)) {
+      .xd, .dx { overflow: hidden; width: 45vw; }
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- logos del header restaurados -->
     <img src="images.jpg" alt="Logo Izquierdo" class="logo">
     <a href="Q ES ANATO.html"><button class="an">¿QUE ES ANATOMIA?</button></a>
     <a href="prueba.html"><button class="hom">SISTEMAS DEL CUERPO</button></a>
@@ -180,8 +209,22 @@
   </header>
 
   <div class="hero">
+    <!-- pieza izquierda (se mostrará "partida" en pantallas grandes) -->
     <img class="xd" src="human_cráneo-removebg-preview.png" alt="lado izquierdo">
-    <img src="logo.png" alt="logo principal" class="logo3">
+
+    <!-- TITULO COLORIDO (opcional visible encima de la imagen central) -->
+    <div class="colorful-title" aria-hidden="true">
+      <span>C</span><span>I</span><span>E</span><span>N</span><span>C</span><span>I</span><span>A</span>
+      <span>-</span>
+      <span>D</span><span>E</span>
+      <span>-</span>
+      <span>C</span><span>O</span><span>L</span><span>O</span><span>R</span><span>E</span><span>S</span>
+    </div>
+
+    <!-- Imagen central restaurada -->
+    <img class="k" src="CIENCIA-DE-COLORES-20-6-2025-removebg-preview.png" alt="Ciencia de Colores">
+
+    <!-- pieza derecha -->
     <img class="dx" src="human_cráneo-removebg-preview.png" alt="lado derecho">
   </div>
 
