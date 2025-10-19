@@ -172,33 +172,26 @@
       z-index: 2;
     }
 
-    /* ==== Ajuste principal ==== */
-    .xd, .dx {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 400px; /* tamaño completo */
-      height: auto;
-      z-index: 1;
-    }
-
-    /* Más hacia los bordes */
-    .xd {
-      left: -160px; /* más alejado del logo */
-      object-position: left;
-    }
-
-    .dx {
-      right: -160px; /* más alejado del logo */
-      object-position: right;
-    }
-
-    /* Imagen central (texto de CIENCIA DE COLORES) más pequeña */
     .k {
       width: 500px; /* antes era 700px, ahora más proporcionado */
       max-width: 80%;
       z-index: 2;
     }
+
+    /* ==== Ajuste principal de imágenes laterales ==== */
+    .xd, .dx {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25vw;        /* ancho proporcional a la pantalla */
+      max-width: 400px;   /* tamaño máximo */
+      height: auto;
+      object-fit: contain; /* mostrar imagen completa */
+      z-index: 1;
+    }
+
+    .xd { left: -10vw; }   /* asomándose desde el borde izquierdo */
+    .dx { right: -10vw; }  /* asomándose desde el borde derecho */
 
     /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
@@ -224,19 +217,14 @@
       .xd, .dx {
         position: relative;
         transform: none;
-        width: 300px;
-        height: auto;
+        width: 60vw;       /* ancho proporcional en móvil */
+        max-width: 300px;
         margin: 10px auto;
-        opacity: 0.9;
+        display: block;
       }
 
-      .xd {
-        order: -1;
-      }
-
-      .dx {
-        order: 1;
-      }
+      .xd { order: -1; }
+      .dx { order: 1; }
 
       .k {
         width: 80%;
