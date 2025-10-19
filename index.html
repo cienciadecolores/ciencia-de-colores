@@ -186,15 +186,15 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 30vw;        /* ancho proporcional */
+      width: 30vw;
       max-width: 450px;
       height: auto;
-      object-fit: contain; /* mostrar imagen completa */
+      object-fit: contain;
       z-index: 1;
     }
 
-    .xd { left: -20vw; }   /* más asomada desde el borde izquierdo */
-    .dx { right: -20vw; }  /* más asomada desde el borde derecho */
+    .xd { left: -20vw; }
+    .dx { right: -20vw; }
 
     /* ==== Ajuste responsivo ==== */
     @media (max-width: 991px) {
@@ -217,17 +217,18 @@
         gap: 15px;
       }
 
+      /* Mantener imágenes laterales visibles y asomadas en móvil */
       .xd, .dx {
-        position: relative;
-        transform: none;
-        width: 70vw;       /* más grande proporcional en móvil */
-        max-width: 320px;
-        margin: 10px auto;
-        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50vw;
+        max-width: 300px;
+        z-index: 1;
       }
 
-      .xd { order: -1; }
-      .dx { order: 1; }
+      .xd { left: -15vw; }
+      .dx { right: -15vw; }
 
       .k {
         width: 80%;
