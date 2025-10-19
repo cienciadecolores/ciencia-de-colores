@@ -102,19 +102,19 @@
 
     /* Imágenes laterales */
     .xd, .dx {
-      width: 350px;
+      width: 450px; /* tamaño más grande */
       height: auto;
       position: absolute;
-      top: 85%; /* mucho más abajo */
+      top: 85%; /* más abajo */
       transform: translateY(-50%);
     }
 
     .xd {
-      left: -175px;
+      left: -225px; /* ajustado según nuevo tamaño */
     }
 
     .dx {
-      right: -175px;
+      right: -225px; /* ajustado según nuevo tamaño */
     }
 
     /* contenedor central (logo + texto) */
@@ -200,9 +200,9 @@
       }
 
       .xd, .dx {
-        width: 250px;
+        width: 250px; /* tamaño móvil se mantiene */
         position: relative;
-        top: 0; /* centrado en móvil */
+        top: 0;
         left: 0;
         right: 0;
         transform: none;
