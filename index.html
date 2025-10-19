@@ -90,7 +90,7 @@
 
     /* -------- HERO -------- */
     .hero {
-      position: relative; /* Para que las imágenes laterales se posicionen respecto a este contenedor */
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,19 +102,19 @@
 
     /* Imágenes laterales */
     .xd, .dx {
-      width: 350px; /* tamaño aumentado */
+      width: 350px;
       height: auto;
       position: absolute;
-      top: 50%;
+      top: 65%; /* bajadas un poco */
       transform: translateY(-50%);
     }
 
     .xd {
-      left: -175px; /* mitad de la nueva anchura */
+      left: -175px;
     }
 
     .dx {
-      right: -175px; /* mitad de la nueva anchura */
+      right: -175px;
     }
 
     /* contenedor central (logo + texto) */
@@ -200,15 +200,15 @@
       }
 
       .xd, .dx {
-        width: 250px; /* tamaño aumentado en móvil */
+        width: 250px;
         position: relative;
+        top: 0;
         left: 0;
         right: 0;
         transform: none;
         margin: 10px auto;
       }
 
-      /* logo y texto en columna en celular */
       .hero-center {
         flex-direction: column;
         gap: 10px;
