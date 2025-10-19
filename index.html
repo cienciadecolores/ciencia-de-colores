@@ -240,41 +240,65 @@ header {
     overflow: hidden;
   }
 
-  /* 🔹 Imágenes del cráneo (mitad músculo / mitad calavera) */
+/* 💻 En laptop y PC (queda igual) */
+.xd {
+  position: absolute;
+  top: 100px;
+  left: -205px;
+  width: 400px;
+  height: auto;
+}
+
+.dx {
+  position: absolute;
+  top: 100px;
+  left: 1165px;
+  width: 400px;
+  height: auto;
+}
+
+/* 📱 En celular */
+@media (max-width: 991px) {
   .xd, .dx {
-    position: absolute;
-    top: 10%;
-    width: 150px;
+    position: relative;
+    top: 0;
+    width: 160px;
     height: auto;
-    opacity: 0.9;
+    margin: 10px;
   }
 
-  .xd {
-    left: -40px;  /* se va más al borde pero visible */
-  }
-
-  .dx {
-    right: -40px; /* igual del otro lado */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
   }
 
   .k {
-    width: 90%;
-    max-width: 400px;
-    z-index: 2;
+    width: 60%;
+    max-width: 300px;
   }
 
   .logo3 {
-    width: 160px;
-    height: 160px;
-  }
+    width: 140px;
+    height: 140px;
+    .xd {
+  position: absolute;
+  top: 100px;
+  left: -205px;
+  width: 400px;
+  height: auto;
+}
 
-  .subtitle-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .subtitle-block {
-    max-width: 90%;
+.dx {
+  position: absolute;
+  top: 100px;
+  left: 1165px;
+  width: 400px;
+  height: auto;
+}
   }
 }
   </style>
@@ -316,5 +340,6 @@ header {
 </div>
 </body>
 </html>
+
 
 
