@@ -160,6 +160,7 @@
       flex-wrap: wrap;
       position: relative;
       overflow: hidden;
+      gap: 40px; /* separa el logo de las imágenes laterales */
     }
 
     .logo3 {
@@ -183,13 +184,20 @@
 
     /* Más hacia los bordes */
     .xd {
-      left: -120px;
+      left: -160px; /* más alejado del logo */
       object-position: left;
     }
 
     .dx {
-      right: -120px;
+      right: -160px; /* más alejado del logo */
       object-position: right;
+    }
+
+    /* Imagen central (texto de CIENCIA DE COLORES) más pequeña */
+    .k {
+      width: 500px; /* antes era 700px, ahora más proporcionado */
+      max-width: 80%;
+      z-index: 2;
     }
 
     /* ==== Ajuste responsivo ==== */
@@ -210,6 +218,7 @@
         align-items: center;
         position: relative;
         min-height: 100vh;
+        gap: 15px;
       }
 
       .xd, .dx {
@@ -230,7 +239,8 @@
       }
 
       .k {
-        width: 90%;
+        width: 80%;
+        max-width: 450px;
         z-index: 2;
         margin-top: 10px;
       }
