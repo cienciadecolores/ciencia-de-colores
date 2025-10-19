@@ -100,8 +100,9 @@
       text-align: center;
     }
 
+    /* Imágenes laterales */
     .xd, .dx {
-      width: 280px;
+      width: 350px; /* tamaño aumentado */
       height: auto;
       position: absolute;
       top: 50%;
@@ -109,11 +110,11 @@
     }
 
     .xd {
-      left: -140px; /* Se asoma solo la mitad de la imagen desde la izquierda */
+      left: -175px; /* mitad de la nueva anchura */
     }
 
     .dx {
-      right: -140px; /* Se asoma solo la mitad de la imagen desde la derecha */
+      right: -175px; /* mitad de la nueva anchura */
     }
 
     /* contenedor central (logo + texto) */
@@ -199,11 +200,11 @@
       }
 
       .xd, .dx {
+        width: 250px; /* tamaño aumentado en móvil */
         position: relative;
         left: 0;
         right: 0;
         transform: none;
-        width: 200px;
         margin: 10px auto;
       }
 
