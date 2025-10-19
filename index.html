@@ -11,11 +11,6 @@
       font-weight: bold;
     }
 
-    @media (max-width:991px){
-      body{ padding:20px; }
-      form{ width:340px; }
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -26,6 +21,7 @@
       background-size: cover;
       background-position: center;
       height: 100vh;
+      font-family: 'Comico', sans-serif;
     }
 
     body, .an, .hom, .ya, header {
@@ -90,67 +86,10 @@
       z-index: 2;
     }
 
-    /* Solo bajamos las imágenes laterales */
+    /* SOLO BAJAMOS LAS IMÁGENES LATERALES */
     .xd, .dx {
-      position: absolute;
-      top: 65%; /* antes 50%, ahora bajadas */
-      transform: translateY(-50%);
-      width: auto;
-      max-width: 35vw;
-      height: 70vh;
-      object-fit: contain;
-      z-index: 1;
+      top: 65%; /* bajadas para no tocar el header */
     }
-
-    .xd { left: -15vw; }
-    .dx { right: -15vw; }
-
-    @media (max-width: 991px) {
-      .hero {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .xd, .dx {
-        top: 70%; /* bajadas en móvil */
-        transform: translateY(-50%);
-        width: auto;
-        max-width: 50vw;
-        height: 50vh;
-      }
-
-      .xd { left: -10vw; }
-      .dx { right: -10vw; }
-
-      .k {
-        width: 80%;
-        max-width: 450px;
-      }
-    }
-
-    .subtitle-container {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      max-width: 900px;
-      margin: 40px auto -30px auto;
-      flex-wrap: wrap;
-    }
-
-    .subtitle-block {
-      max-width: 400px;
-      flex: 1;
-      background-color: #FFF275;
-      border-radius: 25px;
-      border: 10px solid transparent;
-      padding: 10px 20px;
-      text-align: center;
-      color: #444;
-    }
-
-    .subtitle-block h3 { margin-top:0; margin-bottom:10px; font-size:22px; color:#333; }
-    .subtitle-block p { font-size:18px; margin:0; color:#666; }
 
   </style>
 </head>
